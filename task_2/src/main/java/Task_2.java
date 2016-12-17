@@ -1,6 +1,6 @@
-public class Task_2{
-public static double  calculate(String operation, double firstOperand,double secondOperand) {
-  double result;
+public class Task_2 {
+  public static double  calculate(String operation, double firstOperand,double secondOperand) {
+    double result;
     switch(operation) {
       case "addition":
         result = firstOperand + secondOperand;
@@ -27,7 +27,7 @@ public static double  calculate(String operation, double firstOperand,double sec
       break;
       default:
       result = 0;
-    }
+      }
     return result;
-  }
+    }
 }
