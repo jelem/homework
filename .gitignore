@@ -1,12 +1,2 @@
-task_1/.gradle/
-task_1/build
-task_1/build/
-task_2/.gradle/
-task_2/build
-task_2/build/
-task_3/.gradle/
-task_3/build
-task_3/build/
-task_4/.gradle/
-task_4/build/
-task_4/build
+build/
+.gradle/
