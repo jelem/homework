@@ -1,8 +1,12 @@
-package task1;
-public class Calculator{
+package task3;
 
+public class CalculateConsole {
 
-    public static int calculate(int op1, int op2, String operation){
+    public static void main (String[] args){
+
+        int op1 = Integer.parseInt (args [0]);
+        int op2 = Integer.parseInt (args [1]);
+        String operation = args [2];
 
         int result;
         switch (operation){
@@ -22,12 +26,12 @@ public class Calculator{
                 result = op1 % op2;
                 break;
             case "module":
-                    result = Math.abs(op1);
+                result = Math.abs(op1);
                 break;
             default:
                 result = 0;
         }
 
-        return result;
+        System.out.println("Result: " + result);
     }
 }

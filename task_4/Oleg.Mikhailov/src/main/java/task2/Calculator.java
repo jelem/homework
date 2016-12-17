@@ -5,16 +5,16 @@ public class Calculator {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Chuse 1 operation: ");
+        System.out.println("Choose 1 operation: ");
         int op1 = in.nextInt();
-        System.out.println("Chuse 2 operation: ");
+        System.out.println("Choose 2 operation: ");
         int op2 = in.nextInt();
-        System.out.println("Chuse operation: ");
+        System.out.println("Choose operation: ");
         String operation = in.next();
 
         int result;
         switch (operation){
-            case "addition": //при вводе сложения, мы будем складывать
+            case "addition":
                 result = op1 + op2;
                 break;
             case "substraction":
