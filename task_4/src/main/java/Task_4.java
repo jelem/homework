@@ -1,12 +1,6 @@
-package com.hillel;
 import java.util.Scanner;
 public class Task_4 {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Level of service : \n *terrible \n *poor \n *good \n *great \n *excellent \n Input level of service :");
-    String levelOfService = scanner.next();
-    System.out.println("Input bill : ");
-    double bill = scanner.nextDouble();
+  public static double calculateTips(String levelOfService, double bill){
     double tip = 0;
     switch (levelOfService) {
       case "terrible":
@@ -25,6 +19,6 @@ public class Task_4 {
         tip = bill*20/100;
       break;
     }
-    System.out.println("Tip is :" + tip);
+    return tip;
   }
 }

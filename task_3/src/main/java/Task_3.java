@@ -1,17 +1,6 @@
-package com.hillel;
-import java.util.Scanner;
-
-public class Task_2 {
-  public static void main(String args[])  {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Input operation :");
-    String operation = scanner.next();
-    System.out.println("Input firstOperand :");
-    double firstOperand = scanner.nextInt();
-    System.out.println("Input secondOperand :");
-    double secondOperand = scanner.nextInt();
-    double result=0;
-
+public class Task_3{
+public static double  calculate(String operation, double firstOperand,double secondOperand) {
+  double result;
     switch(operation) {
       case "addition":
         result = firstOperand + secondOperand;
@@ -36,8 +25,9 @@ public class Task_2 {
       case "reminderOfDivision":
         result = firstOperand % secondOperand;
       break;
-
+      default:
+      result = 0;
     }
-System.out.println("Result is " + result);
+    return result;
   }
 }

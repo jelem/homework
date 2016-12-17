@@ -1,11 +1,6 @@
-package com.hillel;
-public class Task_3 {
-  public static void main(String args[])  {
-    String operation = args[0];
-    double firstOperand = Integer.parseInt(args[1]);
-    double secondOperand = Integer.parseInt(args[2]);
-    double result=0;
-
+public class Task_1{
+public static double  calculate(String operation, double firstOperand,double secondOperand) {
+  double result;
     switch(operation) {
       case "addition":
         result = firstOperand + secondOperand;
@@ -30,8 +25,9 @@ public class Task_3 {
       case "reminderOfDivision":
         result = firstOperand % secondOperand;
       break;
-
+      default:
+      result = 0;
     }
-System.out.println("Result is " + result);
+    return result;
   }
 }
