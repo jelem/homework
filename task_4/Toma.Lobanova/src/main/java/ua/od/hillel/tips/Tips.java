@@ -29,10 +29,9 @@ public class Tips{
             case "excellent":
                 percent = 20;
                 break;
-            default: {
-                System.out.println("There is no such service rating");
-                return 0;
-            }
+            default: 
+			throw new IllegalArgumentException ("There is no such service rating");
+
         }
         return (int)Math.ceil(amount * percent / 100);
     }
