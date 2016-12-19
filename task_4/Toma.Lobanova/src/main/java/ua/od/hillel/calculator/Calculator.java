@@ -18,8 +18,7 @@ public class Calculator {
                 if (secondOperand != 0) {
                     result = (double) firstOperand / secondOperand;
                 } else {
-                    System.out.println("You can't divide by zero");
-                    return;
+                    throw new ArithmeticException("You can't divide by zero");
                 }
                 break;
             }
@@ -29,13 +28,11 @@ public class Calculator {
             case "remainder":
                 result = (double) firstOperand % secondOperand;
                 break;
-            default: {
-                System.out.println("Calculator can't do this operation");
-                return;
-            }
+            default:
+                throw new IllegalArgumentException("There is no such service rating");
         }
         System.out.print("The first operand = " + firstOperand);
-        if (operation != "absolute") {
+        if (!operation.equals("absolute")) {
             System.out.print(" , the second operand = " + secondOperand);
         }
         System.out.println(" , the operation \"" + operation + "\" , the result = " + result);
