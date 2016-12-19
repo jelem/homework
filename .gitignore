@@ -1,8 +1,2 @@
-build/
 .gradle/
-task_4/Anton.Panciuc/.git/
-task_4/Anton.Panciuc/.gradle/
-task_4/Anton.Panciuc/build/
-task_4/Anton.Panciuc/.gitignore
-
-
+build/
