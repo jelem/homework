@@ -18,27 +18,30 @@ public class CalculatorConsoleInput{
 
   }
   public static int computing(int firstOperand, int secondOperand, String operation){
-    int result;
+    int result = 0;
     switch (operation){
       case "multiplication":
-        return result = firstOperand * secondOperand; 
+        result = firstOperand * secondOperand; 
+        break;
       case "division":
-        return result = firstOperand / secondOperand;
+        result = firstOperand / secondOperand;
+        break;
       case "addition":
-        return result = firstOperand + secondOperand;
+        result = firstOperand + secondOperand;
+        break;
       case "subtraction":
-        return result = firstOperand - secondOperand;
+        result = firstOperand - secondOperand;
+        break;
       case "remainder of the division by zero":
-        return result = firstOperand % secondOperand;
+        result = firstOperand % secondOperand;
+        break;
       case "absolute value":
-        if(firstOperand != 0){
-          return result = Math.abs(firstOperand);
-        }else{
-          return result = Math.abs(secondOperand);
-	}
+        result = Math.abs(firstOperand);
+        break;
       default:
         System.out.println("This operation is not in the calculator");
-	return result = 0;
+	
       }
+      return result;
   }
 }

@@ -10,20 +10,12 @@ public class CalculatorScanner{
 
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter the operation");
-    String operation = sc.nextLine();
+    String operation = sc.next();
     System.out.println("Enter the first operand");
-      if(sc.hasNextInt()){
-        firstOperand = sc.nextInt();
-      }else{
-        System.out.println("The number is not an integer");
-    }
+    firstOperand = sc.nextInt();
     System.out.println("Enter the operation");
-       if(sc.hasNextInt()){
-         secondOperand = sc.nextInt();
-      }else{
-        System.out.println("The number is not an integer");
-    }
-    
+    secondOperand = sc.nextInt();
+       
 
     int result = computing(firstOperand, secondOperand, operation);
     System.out.printf("Result operation %s = %d", operation, result);
@@ -33,27 +25,30 @@ public class CalculatorScanner{
 
   }
   public static int computing(int firstOperand, int secondOperand, String operation){
-    int result;
+    int result = 0;
     switch (operation){
       case "multiplication":
-        return result = firstOperand * secondOperand; 
+        result = firstOperand * secondOperand;
+        break; 
       case "division":
-        return result = firstOperand / secondOperand;
+        result = firstOperand / secondOperand;
+        break;
       case "addition":
-        return result = firstOperand + secondOperand;
+        result = firstOperand + secondOperand;
+        break;
       case "subtraction":
-        return result = firstOperand - secondOperand;
+        result = firstOperand - secondOperand;
+        break;
       case "remainder of the division by zero":
-        return result = firstOperand % secondOperand;
+        result = firstOperand % secondOperand;
+        break;
       case "absolute value":
-        if(firstOperand != 0){
-          return result = Math.abs(firstOperand);
-        }else{
-          return result = Math.abs(secondOperand);
-	}
+        result = Math.abs(firstOperand);
+        break;
       default:
         System.out.println("This operation is not in the calculator");
-	return result = 0;
+	
       }
+      return result;
   }
 }

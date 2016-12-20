@@ -8,13 +8,10 @@ public class Tip{
 
     Scanner sc = new Scanner(System.in);
     System.out.println("Account service: terrible, poor, good, great");
-    String accountService = sc.nextLine();
+    String accountService = sc.next();
     System.out.println("Enter the bill sum");
-      if(sc.hasNextDouble()){
-        billSum = sc.nextDouble();
-      }else{
-        System.out.println("Bill sum entered in the wrong format");
-    }
+    billSum = sc.nextDouble();
+    
     
     double result = computing( billSum, accountService);
     System.out.printf("Invoice amount is = " + result);
@@ -24,17 +21,22 @@ public class Tip{
     double result;
     switch (accountService){
       case "terrible":
-        return result =  billSum;
+        result =  billSum;
+        break;
       case "poor":
-        return result = billSum*1.05; 
+        result = billSum*1.05; 
+        break;
       case "good":
-        return result = billSum*1.10;
+        result = billSum*1.10;
+        break;
       case "great":
-        return result = billSum*1.15; 
+        result = billSum*1.15;
+        break; 
       default:
         System.out.println();
         System.out.println("Incorrect evaluation");
-	return result = 0;
+	result = 0;
       }
+      return result;
   }
 }
