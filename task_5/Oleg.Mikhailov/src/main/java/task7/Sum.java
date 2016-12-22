@@ -4,44 +4,32 @@ package task7;
 public class Sum {
     public static void main(String[] args) {
 
-        String myNumber = "555555";
-        int sum = 0;
-        int sum2 = 0;
-        if (myNumber.length()>1) {
-            int[] num = new int[myNumber.length()];
-            char[] myCharArray = myNumber.toCharArray();
-            for (int i = 0; i < myNumber.length(); i++) {
-                num[i] = Character.getNumericValue(myCharArray[i]);
+        long number = 551515125;
+        long sum = 0;
+        long sum2 = 0;
+
+
+        if (number > 9) {
+            while (number > 0) {
+                sum = sum + number % 10;
+                number = number / 10;
             }
 
-            for (int i = 0; i < myNumber.length(); i++) {
-                sum = sum + num[i];
-            }
-                if(sum>9){
-
-                    String str = Integer.toString(sum); //cумму преобразовал в строку и повторяю повторно
-
-                    int[] tmp = new int[str.length()];
-                    char[] mySum = str.toCharArray();
-                    for (int i = 0; i < mySum.length; i++) {
-                        tmp[i] = Character.getNumericValue(mySum[i]);
-                    }
-                    for (int i = 0; i < mySum.length; i++) {
-                         sum2 = sum2 + tmp[i];
+                if (sum > 9) {
+                    while (sum > 0) {
+                        sum2 = sum2 + sum % 10;
+                        sum = sum / 10;
                     }
                     System.out.println(sum2);
-                }else{
+
+                } else {
                     System.out.println(sum);
                 }
 
-        }else{
-                System.out.println(myNumber);
-            }
-
-
-
-
-
+        } else {
+            System.out.println(number);
         }
+
     }
+}
 
