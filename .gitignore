@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 .gradle/
-=======
->>>>>>> a456c4a55e6e1d7fb1445e98f9f60bac4ee7afb6
 gradle/
 build/
 .idea/
 *.iml
 gradlew
-<<<<<<< HEAD
 gradlew.bat
-=======
-gradlew.bat
->>>>>>> a456c4a55e6e1d7fb1445e98f9f60bac4ee7afb6
+
