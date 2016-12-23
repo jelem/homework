@@ -10,9 +10,15 @@ public class LuckyTickets {
                 .forEach(item -> System.out.println(item));
     }
 
-    static boolean ifLucky(int numberTicket){
-        int sumOneHalf=(numberTicket / 1000 + "").chars().map(item -> item - '0').sum();
-        int sumSecondHalf=(numberTicket % 1000 + "").chars().map(item -> item - '0').sum();
-        return sumOneHalf==sumSecondHalf;
+    static boolean ifLucky(int numberTicket) {
+        int sumOneHalf = (numberTicket / 1000 + "")
+                .chars()
+                .map(item -> item - '0')
+                .sum();
+        int sumSecondHalf = (numberTicket % 1000 + "")
+                .chars()
+                .map(item -> item - '0')
+                .sum();
+        return sumOneHalf == sumSecondHalf;
     }
 }

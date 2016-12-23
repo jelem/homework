@@ -9,3 +9,4 @@ public class Sequence {
                 .forEach(item -> System.out.println(item));
     }
 }
+
