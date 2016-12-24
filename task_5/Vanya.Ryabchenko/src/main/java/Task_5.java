@@ -1,25 +1,30 @@
 public class Task_5 {
     public static void main(String[] args) {
-        int firstDigit = 0;
-        int secondDigit = 0;
-        int thirdDigit = 0;
-        int forthDigit = 0;
-        int fifthDigit = 0;
-        int sixthDigit = 0;
-        int firstPartOfNumber = 0;
-        int secondPartOfNumber = 0;
-        for (int i = 100000; i <= 999999; i++) {
-            firstDigit = i / 100000;
-            secondDigit = i / 10000 % 10;
-            thirdDigit = i / 1000 % 10;
-            forthDigit = i / 100 % 10;
-            fifthDigit = i / 10 % 10;
-            sixthDigit = i % 10;
-            firstPartOfNumber = firstDigit + secondDigit + thirdDigit;
-            secondPartOfNumber = forthDigit + fifthDigit + sixthDigit;
-            if (firstPartOfNumber == secondPartOfNumber) {
-                System.out.println(i);
+        int firstTicket = 100000;
+        int lastTicket = 999999;
+        System.out.println(CountLuckyTicket(firstTicket, lastTicket));
+    }
+
+    private static int CountLuckyTicket(int firstTicket, int lastTicket) {
+        int counter = 0;
+        for (int i = firstTicket; i < lastTicket; i++) {
+            if (ticketIsLucky(i) == true) {
+                counter++;
             }
         }
+
+        return counter;
     }
+
+    private static boolean ticketIsLucky(int i) {
+        return sumOfDigits(i / 1000) == sumOfDigits(i % 1000);
+    }
+
+    private static int sumOfDigits(int i) {
+        int sum = i / 100 + i / 10 % 10 + i % 10;
+        return sum;
+
+    }
+
 }
+
