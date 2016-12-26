@@ -21,4 +21,3 @@ public class FourDigits {
                 .forEach(i -> System.out.println(i));
     }
 }
-

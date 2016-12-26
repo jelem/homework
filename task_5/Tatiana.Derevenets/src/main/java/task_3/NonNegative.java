@@ -11,7 +11,5 @@ public class NonNegative {
                 .forEach(e -> System.out.println(e));
 
 
-
-
     }
 }
