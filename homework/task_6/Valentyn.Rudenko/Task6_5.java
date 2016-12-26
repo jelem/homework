@@ -10,8 +10,6 @@ public class Task6_5 {
         arr = new int[n];
         for (int i = 0; i < arr.length; i++)
             arr[i] = i + 1;
-        // String s = Arrays.toString(arr);
-        //  System.out.println(s);
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0)
                 System.out.println(arr[i]);
