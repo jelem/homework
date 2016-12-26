@@ -3,16 +3,16 @@ package cycle;
 public class Task_8 {
     public static void main(String[] args) {
         int size = 78;
-        int min = minElement(CreateArray(size), size);
-        int max = maxElemnt(CreateArray(size), size);
+        int min = minElement(createArray(size), size);
+        int max = maxElement(createArray(size), size);
         System.out.println(min);
         System.out.println(max);
-        int sum = Sum(minElement(CreateArray(size),size),maxElemnt(CreateArray(size),size),size);
+        int sum = sum(size);
         System.out.println(sum);
 
     }
 
-    public static int[] CreateArray(int size) {
+    public static int[] createArray(int size) {
         int[] array = new int[size];
         for (int i = 0; i < size; i++) {
             array[i] = (int) (Math.random() * 34 + 56);
@@ -31,7 +31,7 @@ public class Task_8 {
         return min;
     }
 
-    public static int maxElemnt(int[] array, int size) {
+    public static int maxElement(int[] array, int size) {
         int max = array[0];
         for (int i = 0; i < size; i++) {
             if (array[i] > max) {
@@ -40,8 +40,9 @@ public class Task_8 {
         }
         return max;
     }
-    public  static int Sum(int min, int max, int size) {
-        int sum = minElement(CreateArray(size),size) + maxElemnt(CreateArray(size), size);
+
+    public static int sum(int size) {
+        int sum = minElement(createArray(size), size) + maxElement(createArray(size), size);
         return sum;
     }
 }

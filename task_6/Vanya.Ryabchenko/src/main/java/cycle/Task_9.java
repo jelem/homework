@@ -3,11 +3,11 @@ package cycle;
 public class Task_9 {
     public static void main(String[] args) {
         int size = 10;
-        long op = op(CreateArray(size),size);
+        long op = op(createArray(size),size);
         System.out.println(op);
     }
 
-    public static int[] CreateArray(int size) {
+    public static int[] createArray(int size) {
         int[] array = new int[size];
 
         for (int i = 0; i < size; i++) {

@@ -4,7 +4,7 @@ public class Task_10 {
     public static void main(String[] args) {
         int size =  100;
         int number = 67;
-        int index = indexOfElements(CreateArray(size), size,number);
+        int index = indexOfElements(createArray(size), size,number);
         if (index != 0) {
             System.out.println(index);
         } else {
@@ -12,7 +12,7 @@ public class Task_10 {
         }
     }
 
-    public static int[] CreateArray(int size) {
+    public static int[] createArray(int size) {
         int[] array = new int[size];
         for (int i = 0; i < size; i++) {
             array[i] = (int) (Math.random() * 34 + 56);

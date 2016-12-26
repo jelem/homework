@@ -2,13 +2,13 @@ public class Task_5 {
     public static void main(String[] args) {
         int firstTicket = 100000;
         int lastTicket = 999999;
-        System.out.println(CountLuckyTicket(firstTicket, lastTicket));
+        System.out.println(countLuckyTicket(firstTicket, lastTicket));
     }
 
-    private static int CountLuckyTicket(int firstTicket, int lastTicket) {
+    private static int countLuckyTicket(int firstTicket, int lastTicket) {
         int counter = 0;
         for (int i = firstTicket; i < lastTicket; i++) {
-            if (ticketIsLucky(i) == true) {
+            if (ticketIsLucky(i)) {
                 counter++;
             }
         }
@@ -27,4 +27,3 @@ public class Task_5 {
     }
 
 }
-
