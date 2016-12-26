@@ -10,9 +10,7 @@ public class Task6_3 {
         n = sc.nextInt();
         arr = new int[n];
         for (int i = 0; i < arr.length; i++)
-            arr[i] = i + 1;  //(int) (Math.random() * n);
-      //  for (int i : arr);
-           // System.out.print(i + " ");
+            arr[i] = i + 1;
         String s = Arrays.toString(arr);
         System.out.println(s);
 
