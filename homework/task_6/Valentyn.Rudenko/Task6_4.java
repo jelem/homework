@@ -11,8 +11,6 @@ public class Task6_4 {
         arr = new int[n];
         for (int i = 0; i < arr.length; i++)
             arr[i] = i + 1;
-       // String s = Arrays.toString(arr);
-      //  System.out.println(s);
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 3 == 0)
                 System.out.println(arr[i]);
