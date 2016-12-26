@@ -4,4 +4,9 @@ build/
 .idea/
 *.iml
 gradlew
+<<<<<<< HEAD
 gradlew.bat
+=======
+gradlew.bat
+
+>>>>>>> a3c3ca0a5814d63fba8f581064f18f325991967e
