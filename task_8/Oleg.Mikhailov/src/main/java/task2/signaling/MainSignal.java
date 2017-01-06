@@ -13,10 +13,8 @@ public class MainSignal {
         signaling.statusSignaling();
 
         signaling.getPass();
-        signaling.statusSignaling();
 
         signaling.getPass();
-        signaling.statusSignaling();
 
         signaling.password = "1234";
         signaling.getPass();

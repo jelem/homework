@@ -24,11 +24,11 @@ public class AutoDoors {
     }
 
     void statusDoors() {
-            if (sensorOut || sensorIn) {
-                System.out.println("Doors open");
-            } else {
-                System.out.println("Doors closed");
-            }
+        if (sensorOut || sensorIn) {
+            System.out.println("Doors open");
+        } else {
+            System.out.println("Doors closed");
+        }
 
     }
 
@@ -36,4 +36,16 @@ public class AutoDoors {
         System.out.println("In room " + count + " person");
     }
 
+
+    boolean statusOutside() {
+        return sensorOut;
+    }
+
+    boolean statusInside() {
+        return sensorIn;
+    }
+
+    int getCount() {
+        return count;
+    }
 }

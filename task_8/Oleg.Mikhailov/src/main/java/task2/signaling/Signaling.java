@@ -49,4 +49,11 @@ public class Signaling {
     }
 
 
+    boolean getPower() {
+        return power;
+    }
+
+    boolean getPassword() {
+        return unlock;
+    }
 }

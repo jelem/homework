@@ -5,6 +5,7 @@ public class Flashlight {
     public static final int MAXIMUM_BARRERIES = 3;
     private int batteries;
     private boolean shines;
+    private int statusMode = 0;
 
     void shine() {
         if (shines) {
@@ -14,9 +15,10 @@ public class Flashlight {
         }
     }
 
-    void lightModeWhite(){
+    void lightModeWhite() {
         if (batteries >= 1) {
             System.out.println("Light is White");
+            statusMode = 1;
         } else {
             System.out.println("Input batteries");
         }
@@ -25,7 +27,8 @@ public class Flashlight {
     void lightModeRed() {
         if (batteries >= 2) {
             System.out.println("Light is Red");
-        }else {
+            statusMode = 2;
+        } else {
             System.out.println("Input batteries");
         }
     }
@@ -33,13 +36,14 @@ public class Flashlight {
     void lightModeBlink() {
         if (batteries == 3) {
             System.out.println("Light is Blink");
-        }else {
+            statusMode = 3;
+        } else {
             System.out.println("Input batteries");
         }
     }
 
 
-        void insertBattery() {
+    void insertBattery() {
         if (batteries == MAXIMUM_BARRERIES) {
             System.out.println("Maximum capacity reached");
             return;
@@ -55,7 +59,10 @@ public class Flashlight {
         return batteries;
     }
 
-    boolean isShines() {
+    int getStatusMode() {
+        return statusMode;
+    }
+    boolean getShines() {
         return shines;
     }
 }
