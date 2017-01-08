@@ -1,5 +1,6 @@
 subprojects {
   apply plugin: 'java'
+  apply plugin: 'checkstyle'
   
   sourceCompatibility = '1.8'
   targetCompatibility = '1.8'
@@ -35,5 +36,12 @@ subprojects {
   task acceptanceTest(type: Test) {
     testClassesDir = project.sourceSets.acceptanceTest.output.classesDir
     classpath = project.sourceSets.acceptanceTest.runtimeClasspath
+  }
+  
+  checkstyle {
+    configFile = rootProject.file('config/checkstyle/checkstyle.xml')
+    checkstyleTest.enabled = false
+    checkstyleAcceptanceTest.enabled = false
+    toolVersion = '7.1.2'
   }
 }

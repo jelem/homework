@@ -1,4 +1,4 @@
-rootProject.name = 'JElementary Homework, Finches team'
+rootProject.name = 'Java Elementary Homework'
 
 def rootDir = new File('.')
 rootDir.eachDirMatch ~/task_\d+\.*\d*/, {
