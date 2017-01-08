@@ -1,8 +1,7 @@
 package task2.autoDoors;
 
-
-import org.hamcrest.core.Is;
-import org.junit.Assert;
+import static org.hamcrest.core.Is.*;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,12 +17,12 @@ public class AutoDoorsTest {
     @Test
     public void testStatusDoors() {
         doors.personOutside();
-        Assert.assertThat(doors.statusOutside(), Is.is(true));
-        Assert.assertThat(doors.statusInside(), Is.is(false));
+        assertThat(doors.statusOutside(), is(true));
+        assertThat(doors.statusInside(), is(false));
 
         doors.personInside();
-        Assert.assertThat(doors.statusOutside(), Is.is(false));
-        Assert.assertThat(doors.statusInside(), Is.is(true));
+        assertThat(doors.statusOutside(), is(false));
+        assertThat(doors.statusInside(), is(true));
     }
 
     @Test
@@ -35,7 +34,7 @@ public class AutoDoorsTest {
             doors.personInside();
         }
 
-        Assert.assertThat(doors.getCount(), Is.is(2));
+        assertThat(doors.getCount(), is(2));
 
 
     }

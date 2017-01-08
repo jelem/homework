@@ -4,7 +4,7 @@ public class Signaling {
     private static final int MAXIMUM_ATTEMPTS = 3;
     private int attempt = 0;
     private boolean power;
-    public String password;
+    private String inputPassword = "1234";
     private String systemPass = "1234";
     private boolean unlock = false;
     int countPower = 0;
@@ -29,7 +29,7 @@ public class Signaling {
 
     void getPass() {
         if (attempt < 3) {
-            if (systemPass.equals(password)) {
+            if (systemPass.equals(inputPassword)) {
                 unlock = true;
             } else {
                 attempt++;
@@ -40,13 +40,14 @@ public class Signaling {
     }
 
     void statusSignaling() {
-        if (power == true && unlock == true) {
+        if (power && unlock) {
             System.out.println("System is unlocked!");
         } else {
             System.out.println("System is locked!");
 
         }
     }
+
 
 
     boolean getPower() {

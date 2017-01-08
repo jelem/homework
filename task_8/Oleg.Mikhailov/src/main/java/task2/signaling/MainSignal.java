@@ -3,7 +3,6 @@ package task2.signaling;
 public class MainSignal {
     public static void main(String[] args) {
         Signaling signaling = new Signaling();
-        signaling.password = "124";
 
         signaling.setPower();
         signaling.switchOnOff();
@@ -16,7 +15,6 @@ public class MainSignal {
 
         signaling.getPass();
 
-        signaling.password = "1234";
         signaling.getPass();
         signaling.statusSignaling();
 
