@@ -5,7 +5,11 @@ subprojects {
   targetCompatibility = '1.8'
 
   repositories {
-      jcenter()
+    jcenter()
+  }
+  
+  task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
   }
 
   dependencies {
