@@ -1,6 +1,7 @@
 subprojects {
   apply plugin: 'java'
   apply plugin: 'checkstyle'
+  apply plugin: 'findbugs'
   
   sourceCompatibility = '1.8'
   targetCompatibility = '1.8'
@@ -43,5 +44,13 @@ subprojects {
     checkstyleTest.enabled = false
     checkstyleAcceptanceTest.enabled = false
     toolVersion = '7.1.2'
+  }
+  
+  tasks.withType(FindBugs) {
+    reports {
+        xml.enabled false
+        html.enabled true
+        html.stylesheet resources.text.fromFile('config/xsl/findbugs-custom.xsl')
+    }
   }
 }
