@@ -12,7 +12,7 @@ public class HomeworcSecond{
     System.out.print("enter operation: ");
     String operation = scanner.next();
 
-    int del = HomeworcCalculator.calculat(op1, op2, operation);
+    int del = HomeworcCalculator.calculate(op1, op2, operation);
     System.out.print(del);
   }
 }

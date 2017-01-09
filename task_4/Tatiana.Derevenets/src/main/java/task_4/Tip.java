@@ -22,7 +22,7 @@ public class Tip{
         result = bill * 0.2;
         break;
       default:
-        result = 0;
+        throw new IllegalArgumentException("Wrong tips type");
     }
 
     return result;
