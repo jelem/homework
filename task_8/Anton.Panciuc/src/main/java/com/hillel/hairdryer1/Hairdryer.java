@@ -1,4 +1,4 @@
-package com.hillel.hairdryer;
+package com.hillel.hairdryer1;
 
 
 public class Hairdryer {

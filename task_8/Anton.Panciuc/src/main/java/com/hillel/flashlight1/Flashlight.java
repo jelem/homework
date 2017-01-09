@@ -1,4 +1,4 @@
-package com.hillel.flashlight;
+package com.hillel.flashlight1;
 
 public class Flashlight {
 
