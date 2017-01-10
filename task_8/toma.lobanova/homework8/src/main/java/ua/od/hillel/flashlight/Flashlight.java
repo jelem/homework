@@ -6,63 +6,67 @@ package ua.od.hillel.flashlight;
 (свойство int battery, которое будет хранить количество батареек для этого подойдет).
 Вы можете добавить возможности фонаря, как сочтете нужным.*/
 enum ModeLight {
-    NOLIGHT, WHITELIGHT, REDLIGHT, BLINK
+  NOLIGHT, WHITELIGHT, REDLIGHT, BLINK
 };
 
 enum Status {ON, OFF};
 
 public class Flashlight {
-    String name = "flash";
-    int batteries = 0;
-    ModeLight mode = ModeLight.NOLIGHT;
-    final int MAX_BATTERY_AMOUNT = 3;
-    Status status = Status.OFF;
+  String name = "flash";
+  int batteries = 0;
+  ModeLight mode = ModeLight.NOLIGHT;
+  final int MAX_BATTERY_AMOUNT = 3;
+  Status status = Status.OFF;
 
-    public int getBatteries() {
-        return batteries;
-    }
+  public int getBatteries() {
+    return batteries;
+  }
 
-    public void setBatteries(int number) {
-        if (batteries == 0) {
-            batteries = MAX_BATTERY_AMOUNT > number ? number : MAX_BATTERY_AMOUNT;
-        } else {
-            batteries = MAX_BATTERY_AMOUNT - batteries > number ? number + batteries : MAX_BATTERY_AMOUNT;
-        }
+  public void setBatteries(int number) {
+    int counter = 1;
+    while (counter <= number && batteries < MAX_BATTERY_AMOUNT) {
+      insertOneBattery();
+      counter++;
     }
+  }
 
-    public ModeLight getMode() {
-        return mode;
-    }
+  private void insertOneBattery() {
+    batteries++;
+  }
 
-    public void setMode(ModeLight newMode) {
-        if (newMode.ordinal() <= batteries) {
-            mode = newMode;
-        }
-    }
+  public ModeLight getMode() {
+    return mode;
+  }
 
-    public String getName() {
-        return name;
+  public void setMode(ModeLight newMode) {
+    if (newMode.ordinal() <= batteries) {
+      mode = newMode;
     }
+  }
 
-    public void setName(String newName) {
-        if (newName != null) {
-            name = newName;
-        }
-    }
+  public String getName() {
+    return name;
+  }
 
-    public Status getStatus() {
-        return status;
+  public void setName(String newName) {
+    if (newName != null) {
+      name = newName;
     }
+  }
 
-    public void putOnOff(Status newStatus) {
-        if (newStatus.name().equals("ON")) {
-            if (batteries > 0) {
-                status = Status.ON;
-                mode = ModeLight.WHITELIGHT;
-            }
-        } else {
-            status = Status.OFF;
-            mode = ModeLight.NOLIGHT;
-        }
+  public Status getStatus() {
+    return status;
+  }
+
+  public void putOnOff(Status newStatus) {
+    if (newStatus == Status.ON) {
+      if (batteries > 0) {
+        status = Status.ON;
+        mode = ModeLight.WHITELIGHT;
+      }
+    } else {
+      status = Status.OFF;
+      mode = ModeLight.NOLIGHT;
     }
+  }
 }
