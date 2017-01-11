@@ -19,18 +19,16 @@ public class ArrayTasks {
   }
 
   public boolean sumExists(int[] array, int sum) {
-    boolean result = false;
 
     int position = 1;
     for (int i = 0; i < array.length; i++) {
       for (int j = position; j < array.length; j++) {
         if (array[i] + array[j] == sum) {
-          result = true;
-          return result;
+          return true;
         }
       }
       position++;
     }
-    return result;
+    return false;
   }
 }
