@@ -2,7 +2,7 @@ package maine.java;
 
 public class HomeworcCalculator{
 
-  public static int calculat(int op1, int op2, String operation) {
+  public static int calculate(int op1, int op2, String operation) {
 
     int result;
     switch (operation) {
