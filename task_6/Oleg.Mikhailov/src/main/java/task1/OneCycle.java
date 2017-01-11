@@ -3,7 +3,7 @@ package task1;
 
 import java.util.Arrays;
 
-public class OneСycle {
+public class OneCycle {
     public static void main(String[] args) {
 
         int[] array = {12, 123, -32, 5, 1, 5, 56, 23, 9, 11};
