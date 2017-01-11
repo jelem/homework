@@ -7,6 +7,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class testArrayTasks {
+
   ArrayTasks arrayTasks;
 
   @Before
@@ -29,7 +30,7 @@ public class testArrayTasks {
     int[] array = {5, 4, 3, 2, 1};
     int sum = 7;
 
-   assertThat(arrayTasks.sumExists(array, sum), is(true));
+    assertThat(arrayTasks.sumExists(array, sum), is(true));
   }
 
   @Test
@@ -39,8 +40,6 @@ public class testArrayTasks {
 
     assertThat(arrayTasks.sumExists(array, sum), is(false));
   }
-
-
 
 
 }
