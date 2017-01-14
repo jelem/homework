@@ -9,7 +9,7 @@ public class ArrayTasks {
     int[] result = Arrays.copyOf(firstArray, secondArray.length + firstArray.length);
     int position = 0;
 
-    for (int i = firstArray.length; i < result.length; i++) {
+     for (int i = firstArray.length; i < result.length; i++) {
       result[i] = secondArray[position];
       position++;
     }
