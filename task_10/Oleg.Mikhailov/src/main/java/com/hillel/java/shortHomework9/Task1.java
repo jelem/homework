@@ -51,14 +51,14 @@ public class Task1 {
 
   private static boolean sum(int[] firstArray, int sum) {
     int firstIndex = 0;
-    int secondIndex = firstArray.length-1;
+    int secondIndex = firstArray.length - 1;
     for (int i = 0; i < firstArray.length; i++) {
 
       if (firstArray[firstIndex] + firstArray[secondIndex] == sum) {
         return true;
       }
 
-        if (firstArray[firstIndex] + firstArray[secondIndex] > sum) {
+      if (firstArray[firstIndex] + firstArray[secondIndex] > sum) {
         secondIndex--;
       } else {
         firstIndex++;

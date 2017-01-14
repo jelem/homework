@@ -51,6 +51,6 @@ public class StringTasks {
 
   public int binaryToDecimal(String number) {
     int result = Integer.parseInt(number, 2);
-        return result;
+    return result;
   }
 }

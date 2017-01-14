@@ -9,6 +9,7 @@ import static org.junit.Assert.assertThat;
 public class SecondTaskTest {
 
   BinarySearch binarySearch;
+
   @Before
   public void setUp() {
     binarySearch = new BinarySearch();
@@ -26,7 +27,7 @@ public class SecondTaskTest {
   public void testIncorrectSearch() {
     int[] array = {1, 3, 6, 9, 12};
     int num = 10;
-    assertThat(binarySearch.exists(array,num), is(false));
+    assertThat(binarySearch.exists(array, num), is(false));
   }
 
 

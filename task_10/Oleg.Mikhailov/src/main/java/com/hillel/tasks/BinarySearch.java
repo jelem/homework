@@ -8,6 +8,7 @@ public class BinarySearch {
       if (array[i] == number) {
         return true;
       }
+
     }
     return false;
 
