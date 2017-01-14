@@ -1,4 +1,4 @@
-package com.hillel.java.shortHomework;
+package com.hillel.java.update;
 
 import java.util.Arrays;
 
