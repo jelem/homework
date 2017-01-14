@@ -1,4 +1,4 @@
-package com.hillel.ArrayTask;
+package com.hillel.tasks;
 
 
 import java.util.Arrays;
