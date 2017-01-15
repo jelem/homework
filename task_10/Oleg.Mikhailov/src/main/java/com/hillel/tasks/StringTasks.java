@@ -50,18 +50,18 @@ public class StringTasks {
   }
 
   public int binaryToDecimal(String number) {
-	  
+
     double result = 0;
     char[] charNum = number.toCharArray();
-    int point = charNum.length-1;
+    int point = charNum.length - 1;
 
-    for (int i = 0; i <= charNum.length-1; i++) {
-      if(charNum[point] == '1') {
+    for (int i = 0; i <= charNum.length - 1; i++) {
+      if (charNum[point] == '1') {
         result += Math.pow(2, i);
       }
       point--;
     }
 
-    return (int)result;
+    return (int) result;
   }
 }
