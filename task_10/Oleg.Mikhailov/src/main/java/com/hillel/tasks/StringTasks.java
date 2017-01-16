@@ -13,19 +13,18 @@ public class StringTasks {
   }
 
   public String shortenWords(String sentence) {
-    int countSymbols = 0;
-    int size = 0;
+
     String[] arrayString = sentence.trim().split(" ");
     StringJoiner result = new StringJoiner(" ");
 
     for (int i = 0; i < arrayString.length; i++) {
       if (arrayString[i].length() < 4) {
-        result.add(arrayString[i] + "");
+        result.add(arrayString[i]);
         continue;
       }
 
-      countSymbols = arrayString[i].length() - 2;
-      size = countSymbols + 1;
+      int countSymbols = arrayString[i].length() - 2;
+      int size = countSymbols + 1;
       result.add(arrayString[i].charAt(0) + "" + countSymbols + "" + arrayString[i].charAt(size));
     }
 

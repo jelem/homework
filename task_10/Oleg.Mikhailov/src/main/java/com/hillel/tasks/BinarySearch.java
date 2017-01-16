@@ -5,9 +5,9 @@ public class BinarySearch {
   public boolean exists(int[] array, int number) {
     int low = 0;
     int high = array.length - 1;
+    int middle = (high + low) / 2;
 
     for (int i = 0; i < array.length; i++) {
-      int middle = (high + low) / 2;
       if (array[middle] == number) {
         return true;
       }
@@ -16,6 +16,7 @@ public class BinarySearch {
       } else {
         low = middle + 1;
       }
+      middle = (high + low) / 2;
     }
 
     return false;
