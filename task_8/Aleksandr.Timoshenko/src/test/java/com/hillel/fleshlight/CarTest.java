@@ -80,5 +80,4 @@ public class CarTest {
     car.carCanGo();
     assertThat(car.getCarGo(), is(true));
   }
-
 }

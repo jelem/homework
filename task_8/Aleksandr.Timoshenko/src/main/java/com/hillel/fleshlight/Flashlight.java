@@ -44,5 +44,4 @@ public class Flashlight {
   public boolean isShine() {
     return shine;
   }
-
 }
