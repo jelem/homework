@@ -19,6 +19,7 @@ public class StringTasks {
     if (sentence == null) {
       return null;
     }
+	sentence = sentence.trim();
     String[] words = sentence.split(" ");
     for (int i = 0; i < words.length; i++) {
       words[i] = checkChangeWord(words[i]);
