@@ -64,7 +64,7 @@ public class StringTasks {
     if (number == null || number.equals("")) {
       return 0;
     }
-    int binary = Integer.valueOf(number);
+    int binary = Integer.parseInt(number);
     int decimal = 0;
     int pow = 0;
     do {
