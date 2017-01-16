@@ -6,16 +6,17 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class HumanTest{
+public class HumanTest {
+
   Human human;
 
   @Before
-  public void setUp(){
+  public void setUp() {
     human = new Human();
   }
 
   @Test
-  public void testGetMoneyForWhell(){
+  public void testGetMoneyForWhell() {
     assertThat(human.getMoney(), is(100));
 
     human.payForWheel();
@@ -38,8 +39,9 @@ public class HumanTest{
 
     assertThat(human.getMoney(), is(60));
   }
+
   @Test
-  public void testGetMoneyForFuil(){
+  public void testGetMoneyForFuil() {
     assertThat(human.getMoney(), is(100));
 
     human.payForFuil();
@@ -58,8 +60,9 @@ public class HumanTest{
 
     assertThat(human.getMoney(), is(40));
   }
+
   @Test
-  public void testIsHumanAtWork(){
+  public void testIsHumanAtWork() {
     assertThat(human.isAtWork(), is(false));
     human.payForWheel();
     human.payForWheel();

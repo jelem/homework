@@ -17,8 +17,9 @@ public class Human {
       }
     }
   }
+
   public void payForFuil() {
-    if (car.getFuel() < car.MAX_FUEL){
+    if (car.getFuel() < car.MAX_FUEL) {
       if (money >= 20) {
         car.fuelCoupons();
         money -= 20;
@@ -27,14 +28,16 @@ public class Human {
       }
     }
   }
-  public boolean isAtWork(){
+
+  public boolean isAtWork() {
     car.carCanGo();
-    if (car.getCarGo()){
+    if (car.getCarGo()) {
       return atWork = true;
     }
     return atWork;
   }
-  public int getMoney(){
+
+  public int getMoney() {
     return money;
   }
 }

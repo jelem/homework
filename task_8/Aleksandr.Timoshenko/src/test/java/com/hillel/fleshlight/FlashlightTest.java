@@ -7,17 +7,18 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class FlashlightTest {
+
   String light;
   Flashlight flashlight;
 
 
   @Before
-  public void setUp(){
+  public void setUp() {
     flashlight = new Flashlight();
   }
 
   @Test
-  public void testIsShine(){
+  public void testIsShine() {
     assertThat(flashlight.isShine(), is(false));
 
     flashlight.insertBattery();
@@ -26,32 +27,33 @@ public class FlashlightTest {
   }
 
   @Test
-  public void testLigthType (){
+  public void testLigthType() {
     light = flashlight.lightType();
-    assertThat (light ,is ("The flashlight does not shine"));
+    assertThat(light, is("The flashlight does not shine"));
 
     flashlight.insertBattery();
 
     light = flashlight.lightType();
-    assertThat (light ,is ("The flashlight shines white light"));
+    assertThat(light, is("The flashlight shines white light"));
 
     flashlight.insertBattery();
 
     light = flashlight.lightType();
-    assertThat (light ,is ("The flashlight shines red light"));
+    assertThat(light, is("The flashlight shines red light"));
 
     flashlight.insertBattery();
 
     light = flashlight.lightType();
-    assertThat (light ,is ("The flashlight blinking"));
+    assertThat(light, is("The flashlight blinking"));
 
     flashlight.insertBattery();
 
     light = flashlight.lightType();
-    assertThat (light ,is ("The flashlight blinking"));
+    assertThat(light, is("The flashlight blinking"));
   }
+
   @Test
-  public void testInsertBattery(){
+  public void testInsertBattery() {
 
     assertThat(flashlight.getBattery(), is(0));
 

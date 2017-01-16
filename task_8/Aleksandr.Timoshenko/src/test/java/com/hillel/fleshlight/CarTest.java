@@ -4,14 +4,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class CarTest {
+
   Car car;
 
   @Before
-  public void setUp(){
+  public void setUp() {
     car = new Car();
   }
 
@@ -21,7 +23,7 @@ public class CarTest {
   }
 
   @Test
-  public void testHasWheel(){
+  public void testHasWheel() {
     assertThat(car.getWheel(), is(0));
 
     car.setWheel();
@@ -46,7 +48,7 @@ public class CarTest {
   }
 
   @Test
-  public void testFuel(){
+  public void testFuel() {
     assertThat(car.getFuel(), is(0));
 
     car.fuelCoupons();
@@ -67,7 +69,7 @@ public class CarTest {
   }
 
   @After
-  public void test2CarCanGo(){
+  public void test2CarCanGo() {
     car.setWheel();
     car.setWheel();
     car.setWheel();
@@ -76,7 +78,7 @@ public class CarTest {
     car.fuelCoupons();
     car.fuelCoupons();
     car.carCanGo();
-    assertThat(car.getCarGo(), is (true));
+    assertThat(car.getCarGo(), is(true));
   }
 
 }

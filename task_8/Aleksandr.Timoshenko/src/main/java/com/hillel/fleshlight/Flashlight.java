@@ -1,5 +1,6 @@
 package com.hillel.fleshlight;
 
+
 public class Flashlight {
 
   public static final int MAX_BATTERY = 3;
@@ -9,7 +10,7 @@ public class Flashlight {
   private boolean shine;
 
 
-  public String lightType () {
+  public String lightType() {
     switch (battery) {
       case 0:
         light = "The flashlight does not shine";
@@ -26,18 +27,21 @@ public class Flashlight {
     }
     return light;
   }
-  public void insertBattery(){
-    if (battery == MAX_BATTERY){
+
+  public void insertBattery() {
+    if (battery == MAX_BATTERY) {
       System.out.println("Inserting the batteries have a maximum");
-    }else{
+    } else {
       battery++;
       shine = true;
     }
   }
-  public int getBattery(){
+
+  public int getBattery() {
     return battery;
   }
-  public boolean isShine(){
+
+  public boolean isShine() {
     return shine;
   }
 
