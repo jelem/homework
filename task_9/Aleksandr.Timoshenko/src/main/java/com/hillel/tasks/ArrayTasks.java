@@ -32,19 +32,19 @@ public class ArrayTasks {
 
   public boolean sumExists(int[] array, int sum) {
     boolean result = false;
-    int i = 0;
-    int j = array.length - 1;
-    while (i != j) {
-      if (array[i] + array[j] == sum) {
+    int lowIndex = 0;
+    int hiIndex = array.length - 1;
+    while (lowIndex != hiIndex) {
+      if (array[lowIndex] + array[hiIndex] == sum) {
         result = true;
         break;
       }
-      if (array[i] + array[j] > sum) {
-        j--;
+      if (array[lowIndex] + array[hiIndex] > sum) {
+        hiIndex--;
         continue;
       }
-      if (array[i] + array[j] < sum) {
-        i++;
+      if (array[lowIndex] + array[hiIndex] < sum) {
+        lowIndex++;
         continue;
       }
     }
