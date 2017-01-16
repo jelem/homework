@@ -1,6 +1,6 @@
 package com.hillel.tasks;
 
-import java.util.Arrays;
+import java.util.StringJoiner;
 
 public class StringTasks {
 
@@ -16,24 +16,20 @@ public class StringTasks {
     int countSymbols = 0;
     int size = 0;
     String[] arrayString = sentence.trim().split(" ");
-    StringBuilder result = new StringBuilder();
+    StringJoiner result = new StringJoiner(" ");
 
     for (int i = 0; i < arrayString.length; i++) {
       if (arrayString[i].length() < 4) {
-        result.append(arrayString[i] + " ");
+        result.add(arrayString[i] + "");
         continue;
       }
 
       countSymbols = arrayString[i].length() - 2;
       size = countSymbols + 1;
-      result.append(arrayString[i].charAt(0));
-      result.append(countSymbols);
-      result.append(arrayString[i].charAt(size) + " ");
-
-
+      result.add(arrayString[i].charAt(0) + "" + countSymbols + "" + arrayString[i].charAt(size));
     }
 
-    return result.toString().trim();
+    return result.toString();
   }
 
   public int countPalindromes(String words) {
@@ -51,7 +47,7 @@ public class StringTasks {
 
   public int binaryToDecimal(String number) {
 
-    double result = 0;
+    int result = 0;
     char[] charNum = number.toCharArray();
     int point = charNum.length - 1;
 
@@ -62,6 +58,6 @@ public class StringTasks {
       point--;
     }
 
-    return (int) result;
+    return result;
   }
 }

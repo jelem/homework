@@ -9,6 +9,8 @@ import static org.junit.Assert.assertThat;
 public class SecondTaskTest {
 
   BinarySearch binarySearch;
+  static int[] array = new int[]{1, 3, 6, 9, 12};
+
 
   @Before
   public void setUp() {
@@ -17,7 +19,6 @@ public class SecondTaskTest {
 
   @Test
   public void testSearch() {
-    int[] array = {1, 3, 6, 9, 12};
     int num = 9;
 
     assertThat(binarySearch.exists(array, num), is(true));
@@ -25,7 +26,6 @@ public class SecondTaskTest {
 
   @Test
   public void testIncorrectSearch() {
-    int[] array = {1, 3, 6, 9, 12};
     int num = 10;
     assertThat(binarySearch.exists(array, num), is(false));
   }
