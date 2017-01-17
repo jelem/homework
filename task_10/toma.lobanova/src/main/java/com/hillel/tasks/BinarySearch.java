@@ -10,7 +10,7 @@ public class BinarySearch {
     if (endIndex < startIndex) {
       return false;
     }
-    int midIndex = startIndex + (endIndex - startIndex) / 2;
+    int midIndex = (startIndex + endIndex) >>> 1;
     if (number < array[midIndex]) {
       return exists(array, number, startIndex, midIndex - 1);
     } else if (number > array[midIndex]) {

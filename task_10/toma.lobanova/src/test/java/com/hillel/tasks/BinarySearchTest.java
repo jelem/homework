@@ -8,6 +8,7 @@ import static org.junit.Assert.assertThat;
 
 public class BinarySearchTest {
   BinarySearch binarySearch;
+  int[] array = {1, 45, 67, 89, 456, 789, 1000};
 
   @Before
   public void setUp() {
@@ -16,19 +17,16 @@ public class BinarySearchTest {
 
   @Test
   public void binarySearchTestPositive() {
-    int[] array = {1, 45, 67, 89, 456, 789, 1000};
-    boolean result = true;
     boolean actualResult = binarySearch.exists(array, 89);
-    assertThat(actualResult, is(result));
+    assertThat(actualResult, is(true));
     actualResult = binarySearch.exists(array, 789);
-    assertThat(actualResult, is(result));
+    assertThat(actualResult, is(true));
   }
 
   @Test
   public void binarySearchTestNegative() {
-    int[] array = {1, 45, 67, 89, 456, 789, 1000};
-    boolean result = false;
     boolean actualResult = binarySearch.exists(array, 90);
-    assertThat(actualResult, is(result));
+    assertThat(actualResult, is(false));
   }
 }
+

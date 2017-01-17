@@ -6,12 +6,8 @@ public class StringTasks {
     if (email == null) {
       return null;
     }
-    if (email.contains("@")) {
-      email = email.replace("@", "[ at ]");
-    }
-    if (email.contains(".")) {
-      email = email.replaceAll("\\.", "[ dot ]");
-    }
+    email = email.replace("@", "[ at ]");
+    email = email.replaceAll("\\.", "[ dot ]");
     return email;
   }
 
@@ -41,7 +37,7 @@ public class StringTasks {
       return 0;
     }
     int countPallindrom = 0;
-    String[] wordsArray = words.split("\\,");
+    String[] wordsArray = words.split(",");
     for (int i = 0; i < wordsArray.length; i++) {
       if (checkWord(wordsArray[i])) {
         countPallindrom++;
@@ -55,17 +51,18 @@ public class StringTasks {
     word = word.trim();
     StringBuilder builder = new StringBuilder();
     builder.append(word);
-    if (word.equals(builder.reverse().toString())) {
-      return true;
-    }
-    return false;
+    return word.equals(builder.reverse().toString());
   }
 
   public int binaryToDecimal(String number) {
     if (number == null || number.equals("")) {
       return 0;
     }
-    int binary = Integer.parseInt(number);
+    int binary = 0;
+    int length = number.length();
+    for (int i = 0; i < length; i++) {
+      binary += Character.getNumericValue(number.charAt(i)) * Math.pow(10, length - i - 1);
+    }
     int decimal = 0;
     int pow = 0;
     do {

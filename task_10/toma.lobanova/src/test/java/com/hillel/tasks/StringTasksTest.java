@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
 
 public class StringTasksTest {
@@ -18,7 +19,7 @@ public class StringTasksTest {
   @Test
   public void replaceEmailTestInputNull() {
     String result = stringTask.replaceEmail(null);
-    assertThat(result, is(equalTo(null)));
+    assertThat(result, is(nullValue()));
   }
 
   @Test
@@ -31,7 +32,7 @@ public class StringTasksTest {
   @Test
   public void shortenWordsTestNull() {
     String result = stringTask.shortenWords(null);
-    assertThat(result, is(equalTo(null)));
+    assertThat(result, is(nullValue()));
   }
 
   @Test
