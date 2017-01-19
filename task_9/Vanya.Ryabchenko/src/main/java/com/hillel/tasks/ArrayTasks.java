@@ -5,7 +5,8 @@ public class ArrayTasks {
   public int[] merge(int[] firstArray, int[] secondArray) {
     int arrayLength = firstArray.length + secondArray.length;
     int[] array = new int[arrayLength];
-    int firstIndex = 0, secondIndex = 0;
+    int firstIndex = 0;
+    int secondIndex = 0;
 
     for (int i = 0; i < arrayLength; i++) {
       if (firstIndex >= firstArray.length) {
