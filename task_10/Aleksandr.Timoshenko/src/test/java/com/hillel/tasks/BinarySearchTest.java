@@ -1,10 +1,12 @@
 package com.hillel.tasks;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import com.hillel.tasks.BinarySearch;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class BinarySearchTest {
 
@@ -20,12 +22,6 @@ public class BinarySearchTest {
   public void existsTruTest() {
     int number = 8;
     assertThat(binarySearch.exists(array, number), is(true));
-  }
-
-  @Test
-  public void existsFalseTest() {
-    int number = 27;
-    assertThat(binarySearch.exists(array, number), is(false));
   }
 
   @Test

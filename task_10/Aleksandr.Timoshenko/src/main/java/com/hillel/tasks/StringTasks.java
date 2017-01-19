@@ -9,8 +9,7 @@ public class StringTasks {
   }
 
   public String shortenWords(String sentence) {
-    String[] words = sentence.split(" ");
-    String shortWord = "";
+    String[] words = (sentence.trim()).split(" ");
     for (int i = 0; i < words.length; i++) {
       if (words[i].length() >= 4) {
         String word = words[i];
@@ -23,7 +22,7 @@ public class StringTasks {
 
 
     }
-    return shortWord = String.join(" ", words);
+    return String.join(" ", words);
   }
 
   public int countPalindromes(String words) {
@@ -31,7 +30,7 @@ public class StringTasks {
     String[] arrayWords = words.split(",");
     for (int i = 0; i < arrayWords.length; i++) {
       String word = arrayWords[i].trim();
-      String reversWord = new StringBuffer(word).reverse().toString();
+      String reversWord = new StringBuilder(word).reverse().toString();
       if (word.equals(reversWord)) {
         polindromes++;
       }

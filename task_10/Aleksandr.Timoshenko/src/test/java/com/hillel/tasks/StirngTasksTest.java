@@ -1,44 +1,45 @@
 package com.hillel.tasks;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import com.hillel.tasks.StringTasks;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class StirngTasksTest {
 
-  StringTasks stringTasks;
+  StringTasks tasks;
 
   @Before
   public void setUp() {
-    stringTasks = new StringTasks();
+    tasks = new StringTasks();
   }
 
   @Test
   public void replaceEmailTest() {
     String email = "person@gmail.com";
-    assertThat(stringTasks.replaceEmail(email), is("person[ at ]gmail[ dot ]com"));
+    assertThat(tasks.replaceEmail(email), is("person[ at ]gmail[ dot ]com"));
   }
 
   @Test
   public void shortenWordsTest() {
     String str = "internationalization localization cat elephant monitor";
-    assertThat(stringTasks.shortenWords(str), is("i18n l10n cat e6t m5r"));
+    assertThat(tasks.shortenWords(str), is("i18n l10n cat e6t m5r"));
 
   }
 
   @Test
   public void countPalindromesTest() {
     String words = "deleveled, evitative, cat, dog, deified";
-    assertThat(stringTasks.countPalindromes(words), is(3));
+    assertThat(tasks.countPalindromes(words), is(3));
   }
 
   @Test
   public void binaryToDecimaTest() {
     String number = "1100";
-    assertThat(stringTasks.binaryToDecimal(number), is(12));
+    assertThat(tasks.binaryToDecimal(number), is(12));
   }
 
 }
