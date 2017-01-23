@@ -1,3 +1,5 @@
+package com.hillel.tasks;
+
 public class ArrayTasks {
 
   public int[] merge(int[] firstArray, int[] secondArray) {
