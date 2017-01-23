@@ -1,10 +1,13 @@
+package com.hillel.tasks;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+import com.hillel.tasks.ArrayTasks;
 import org.junit.Before;
 import org.junit.Test;
 
-public class testArrayTasks {
+public class ArrayTasksTest {
 
   ArrayTasks arrayTasks;
 
