@@ -18,8 +18,8 @@ public class TestArrayTasks {
   @Test
   public void testClone() {
     int[] firstArray = {1, 5, 7};
-    int[] secondArray = {6, 9, 10, 15, 17};
-    int[] result = {1, 5, 6, 7, 9, 10, 15, 17};
+    int[] secondArray = {4, 6, 9, 10, 17};
+    int[] result = {1, 4, 5, 6, 7, 9, 10, 17};
 
     int[] getResult = arrayTasks.merge(firstArray, secondArray);
     assertThat(getResult, is(result));
