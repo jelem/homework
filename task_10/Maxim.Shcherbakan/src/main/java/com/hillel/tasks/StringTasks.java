@@ -1,5 +1,7 @@
 package com.hillel.tasks;
 
+import java.util.StringJoiner;
+
 public class StringTasks {
 
   public static void main(String[] args) {
@@ -18,11 +20,11 @@ public class StringTasks {
       if (array[i].length() < 4) {
         continue;
       }
-      StringBuilder word = new StringBuilder();
+      StringJoiner word = new StringJoiner("");
       array[i] = word
-          .append(array[i].charAt(0))
-          .append(array[i].length() - 2)
-          .append(array[i].charAt(array[i].length() - 1))
+          .add(String.valueOf(array[i].charAt(0)))
+          .add(String.valueOf(array[i].length() - 2))
+          .add(String.valueOf(array[i].charAt(array[i].length() - 1)))
           .toString();
     }
     return String.join(" ", array);
