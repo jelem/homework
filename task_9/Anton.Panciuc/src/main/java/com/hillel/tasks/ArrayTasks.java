@@ -1,16 +1,6 @@
 package com.hillel.tasks;
 
-
-import java.util.Arrays;
-
 public class ArrayTasks {
-
-  public static void main(String[] args) {
-    ArrayTasks arrayTasks = new ArrayTasks();
-    int[] firstArray = {1, 5, 7};
-    int[] secondArray = {4, 6, 9, 10, 17};
-    boolean getResult = arrayTasks.sumExists(secondArray, 15);
-  }
 
   public int[] merge(int[] firstArray, int[] secondArray) {
     int resultLength = firstArray.length + secondArray.length;
