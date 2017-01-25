@@ -44,19 +44,19 @@ public class ArrayTasks {
   }
 
   public boolean sumExists(int[] array, int sum) {
-    int j = array.length - 1;
+    int last = array.length - 1;
 
-    for (int i = 0; i < array.length-1; ) {
-      if (i > j) {
+    for (int i = 0; i < array.length - 1; ) {
+      if (i > last) {
         return false;
       }
-      if (array[i] + array[j] == sum) {
+      if (array[i] + array[last] == sum) {
         return true;
       }
-      if (array[i] + array[j] < sum) {
+      if (array[i] + array[last] < sum) {
         i++;
       } else {
-        j--;
+        last--;
       }
     }
     return false;
