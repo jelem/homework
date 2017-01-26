@@ -48,8 +48,8 @@ public class Complex {
     double numberReal = complex.real;
     double numberImaginary = complex.imaginary;
     double resultReal = Math
-        .sqrt((Math.sqrt(numberReal * numberReal + numberImaginary * numberImaginary) +
-            numberReal) / 2);
+        .sqrt((Math.sqrt(numberReal * numberReal + numberImaginary * numberImaginary)
+            + numberReal) / 2);
     double resultImaginary = Math
         .sqrt((Math.sqrt(numberReal * numberReal + numberImaginary * numberImaginary)
             - numberReal) / 2);
