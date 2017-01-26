@@ -58,7 +58,7 @@ public class Complex {
   }
 
 
-  public boolean equals(Complex complex) {
+  public boolean equals(Object complex) {
     if (complex == null) {
       return false;
     }
