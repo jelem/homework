@@ -7,11 +7,11 @@ public class BinarySearch {
     int last = array.length - 1;
     int middle = (first + last) / 2;
 
-    for (int i = 0; i < array.length; i++){
+    for (int i = 0; i < array.length; i++) {
       if (array[middle] == number) {
         return true;
       }
-      if (number <=array[middle]){
+      if (number <= array[middle]) {
         last = middle - 1;
       } else {
         first = middle + 1;
