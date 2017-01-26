@@ -16,18 +16,19 @@ public class StringTasks {
 
   public String shortenWords(String sentence) {
     String[] array = sentence.trim().split(" ");
-    for (int i = 0; i < array.length; i++) {
-      if (array[i].length() < 4) {
+    StringJoiner words = new StringJoiner(" ");
+    for (String str : array) {
+      if (str.length() < 4) {
+        words.add(str);
         continue;
       }
-      StringJoiner word = new StringJoiner("");
-      array[i] = word
-          .add(String.valueOf(array[i].charAt(0)))
-          .add(String.valueOf(array[i].length() - 2))
-          .add(String.valueOf(array[i].charAt(array[i].length() - 1)))
-          .toString();
+      words.add(
+          String.valueOf(str.charAt(0))
+              + String.valueOf(str.length() - 2)
+              + String.valueOf(str.charAt(str.length() - 1))
+      );
     }
-    return String.join(" ", array);
+    return words.toString();
   }
 
   public int countPalindromes(String words) {
