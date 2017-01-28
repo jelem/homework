@@ -7,7 +7,7 @@ import java.util.StringJoiner;
 public class StringTasks {
 
   //first task
-  public static String replaceEmail(String email){
+  public static String replaceEmail(String email) {
 
     String result = email.replace("@", "[ at ]");
     result = result.replace(".", "[ dot ]");
@@ -15,8 +15,6 @@ public class StringTasks {
     return result;
   }
 
-  //second task
-  String sentence = "internationalization localization cat elephant monitor";
 
 
   public String shortenWords(String sentence) {
@@ -41,7 +39,7 @@ public class StringTasks {
 
   //third task
 
-  public int  countPalindromes(String str2){
+  public int  countPalindromes(String str2) {
     String[] srt1 = str2.split(", ");
 
     int count = 0;
@@ -61,14 +59,12 @@ public class StringTasks {
     int result = 0;
     int point = binary.length() - 1;
     char[] array = binary.toCharArray();
-    for (int i = 0; i <= binary.length(); i++) {
+    for (int i = 0; i < binary.length(); i++) {
       if (array[point] == '1') {
         result += Math.pow(2, i);
       }
       point--;
     }
-    System.out.println("binary: " + binaryToDecimal(binary));
-
     return result;
   }
 
