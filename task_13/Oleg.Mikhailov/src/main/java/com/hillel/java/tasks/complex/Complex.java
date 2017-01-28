@@ -12,7 +12,6 @@ public class Complex {
 
   public Complex() {
     this.real = 0;
-    this.real = 0;
   }
 
   public Complex add(Complex complex) {
@@ -57,7 +56,6 @@ public class Complex {
     return new Complex(resultReal, resultImaginary);
   }
 
-
   public boolean equals(Object complex) {
     if (complex == null) {
       return false;
@@ -73,7 +71,6 @@ public class Complex {
     assert false : "hashCode not designed";
     return 42;
   }
-
 
   @Override
   public String toString() {
