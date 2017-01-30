@@ -14,11 +14,11 @@ public class Circle extends Figure {
 
   @Override
   public int getPerimeter() {
-    return (int) (2 * 3.14) * this.radius;
+    return (int) (2 * Math.PI) * this.radius;
   }
 
   @Override
   public int getArea() {
-    return (int) 3.14 * (this.radius * this.radius);
+    return (int) Math.PI * (this.radius * this.radius);
   }
 }
