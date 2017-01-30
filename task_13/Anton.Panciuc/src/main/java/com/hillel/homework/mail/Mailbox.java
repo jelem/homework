@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Mailbox {
   private ArrayList<Message> inbox;
   private ArrayList<Message> send;
-  static final String MY_EMAIL = "  ";
+  static final String MY_EMAIL = "mail@mail.com";
 
   public Mailbox() {
     inbox = new ArrayList<Message>();
