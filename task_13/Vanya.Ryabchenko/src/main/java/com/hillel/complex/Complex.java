@@ -60,4 +60,30 @@ public class Complex {
     String result = this.real + "+" + this.imaginary + "i";
     return result;
   }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (o == null || getClass() != o.getClass())
+      return false;
+
+    Complex complex = (Complex) o;
+
+    if (Double.compare(complex.real, real) != 0)
+      return false;
+    return Double.compare(complex.imaginary, imaginary) == 0;
+
+  }
+
+  @Override
+  public int hashCode() {
+    int result;
+    long temp;
+    temp = Double.doubleToLongBits(real);
+    result = (int) (temp ^ (temp >>> 32));
+    temp = Double.doubleToLongBits(imaginary);
+    result = 31 * result + (int) (temp ^ (temp >>> 32));
+    return result;
+  }
 }

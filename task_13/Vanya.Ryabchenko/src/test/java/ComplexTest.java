@@ -12,8 +12,7 @@ public class ComplexTest {
     Complex firstNumber = new Complex(2,5);
     Complex secondNumber = new Complex(3,5);
     Complex addResult = firstNumber.add(secondNumber);
-
-
+    assertThat(addResult.equals(new Complex(5,10)), is(true));
   }
 
 }
