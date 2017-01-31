@@ -21,8 +21,8 @@ public class FibonacciTest {
     assertThat(13, is(result));
   }
   @Test
-  public void testInterative() {
-    int result = this.fibonacci.recursive(7);
+  public void testIterative() {
+    int result = this.fibonacci.iterative(7);
     assertThat(13, is(result));
   }
 

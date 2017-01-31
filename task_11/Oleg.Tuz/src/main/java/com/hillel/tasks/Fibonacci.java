@@ -15,7 +15,7 @@ public class Fibonacci {
 
 
   //решение интеративом , сложность O(n)-
-  public int interative(int element) {
+  public int iterative(int element) {
     int previous = 0;
     int next = 1;
     int summing = 1;
