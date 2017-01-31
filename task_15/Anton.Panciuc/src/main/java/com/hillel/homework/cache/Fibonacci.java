@@ -30,10 +30,10 @@ public class Fibonacci {
   }
 
   public String getCache(int element) {
-    String cacheCurrentRange = new String();
+    StringBuffer buffer = new StringBuffer();
     for (int i = 0; i < element; i++) {
-      cacheCurrentRange += cache[i] + " ";
+      buffer.append(cache[i] + " ");
     }
-    return cacheCurrentRange;
+    return buffer.toString();
   }
 }
