@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.hillel.homework.mail;
 
 
@@ -44,7 +43,7 @@ public class Mailbox {
     send.add(newLetter);
   }
 }
-=======
+
 package com.hillel.homework.mail;
 
 
@@ -90,4 +89,4 @@ public class Mailbox {
     send.add(newLetter);
   }
 }
->>>>>>> c2ac787eb4428b5f077ad39949f5e2969611fa2e
+
