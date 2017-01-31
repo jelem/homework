@@ -1,4 +1,4 @@
-package com.hillel.homework.BigInteger;
+package com.hillel.homework.biginteger;
 
 
 import java.math.BigInteger;
@@ -15,7 +15,8 @@ public class Fibonacci {
       return BigInteger.valueOf(1);
     }
 
-    BigInteger result = recursive(element.add(BigInteger.valueOf(-1))).add(recursive(element.add(BigInteger.valueOf(-2))));
+    BigInteger result = recursive(element.add(BigInteger.valueOf(-1)))
+        .add(recursive(element.add(BigInteger.valueOf(-2))));
 
     return result;
   }
