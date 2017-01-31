@@ -3,52 +3,59 @@ package com.hillel.mail;
 public class Mail {
 
   private static final int MAX_LETTERS = 10;
-  private Letter[] input;
-  private Letter[] output;
-  private int counterInput;
-  private int counterOutput;
+  private Letter[] inbox;
+  private Letter[] outbox;
+  private int counterInbox;
+  private int counterOutbox;
 
   public Mail() {
-    this.input = new Letter[MAX_LETTERS];
-    this.output = new Letter[MAX_LETTERS];
-    this.counterInput = 0;
-    this.counterOutput = 0;
+    this.inbox = new Letter[MAX_LETTERS];
+    this.outbox = new Letter[MAX_LETTERS];
+    this.counterInbox = 0;
+    this.counterOutbox = 0;
   }
 
-  public void addInputLetter(Letter letter) {
-    if (counterInput == MAX_LETTERS) {
+  public void addInboxLetter(Letter letter) {
+    if (counterInbox == MAX_LETTERS) {
       System.out.println("Mail Full");
     } else {
-      this.input[counterInput] = letter;
-      counterInput++;
+      this.inbox[counterInbox] = letter;
+      counterInbox++;
     }
   }
 
-  public void removeInputLetter() {
-    if (counterInput == 0) {
+  public void removeInboxLetter() {
+    if (counterInbox == 0) {
       System.out.println("Mail empty");
     } else {
-      this.input[counterInput] = null;
-      counterInput--;
+      this.inbox[counterInbox] = null;
+      counterInbox--;
     }
   }
 
-  public void addOutputLetter(Letter letter) {
-    if (counterOutput == MAX_LETTERS) {
+  public void addOutboxLetter(Letter letter) {
+    if (counterOutbox == MAX_LETTERS) {
       System.out.println("Mail Full");
     } else {
-      this.output[counterOutput] = letter;
-      counterOutput++;
+      this.outbox[counterOutbox] = letter;
+      counterOutbox++;
     }
   }
 
-  public void removeOutputLetter() {
-    if (counterOutput == 0) {
+  public void removeOutboxLetter() {
+    if (counterOutbox == 0) {
       System.out.println("Mail empty");
     } else {
-      this.output[counterOutput] = null;
-      counterOutput--;
+      this.outbox[counterOutbox] = null;
+      counterOutbox--;
     }
   }
 
+  public int getCounterInbox() {
+    return counterInbox;
+  }
+
+  public int getCounterOutbox() {
+    return counterOutbox;
+  }
 }

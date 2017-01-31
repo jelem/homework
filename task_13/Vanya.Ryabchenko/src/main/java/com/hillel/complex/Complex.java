@@ -63,15 +63,18 @@ public class Complex {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o)
+    if (this == o) {
       return true;
-    if (o == null || getClass() != o.getClass())
+    }
+    if (o == null || getClass() != o.getClass()) {
       return false;
+    }
 
     Complex complex = (Complex) o;
 
-    if (Double.compare(complex.real, real) != 0)
+    if (Double.compare(complex.real, real) != 0) {
       return false;
+    }
     return Double.compare(complex.imaginary, imaginary) == 0;
 
   }
