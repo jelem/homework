@@ -27,9 +27,6 @@ public class Fibonacci {
   }
 
   public boolean isNumberInCache(int index) {
-    if (index > cache.size() || index < 1) {
-      return false;
-    }
-    return true;
+    return (index <= cache.size() && index >= 1);
   }
 }
