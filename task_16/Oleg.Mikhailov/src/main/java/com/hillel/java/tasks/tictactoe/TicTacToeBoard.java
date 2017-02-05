@@ -14,16 +14,18 @@ public class TicTacToeBoard implements Board {
   }
 
   @Override
+  public char getSymbol(int row, int column) {
+    return gameBoard[row][column];
+  }
+
+  @Override
   public void printBoard() {
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 3; j++) {
-        System.out.print(gameBoard[i][j] +  " | ");
+        System.out.print(gameBoard[i][j] + " |  ");
       }
       System.out.println();
     }
   }
 
-  public char getCharGameBoard(int first, int second) {
-    return gameBoard[first][second];
-  }
 }
