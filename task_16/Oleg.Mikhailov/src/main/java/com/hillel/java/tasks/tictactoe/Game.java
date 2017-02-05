@@ -1,5 +1,6 @@
 package com.hillel.java.tasks.tictactoe;
 
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -29,7 +30,7 @@ class Game {
     return mode;
   }
 
-  void start() {
+  void start() throws IOException {
     mode = chooseModeGame();
     switch (mode) {
       case "One":

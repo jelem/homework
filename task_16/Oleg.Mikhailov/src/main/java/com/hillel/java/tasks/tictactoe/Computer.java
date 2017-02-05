@@ -1,5 +1,8 @@
 package com.hillel.java.tasks.tictactoe;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,7 +11,7 @@ public class Computer extends Player {
   private String name;
   private Random random = new Random();
 
-  Computer(String name) {
+  Computer(String name) throws IOException {
     super(name);
     this.name = name;
   }
@@ -16,10 +19,11 @@ public class Computer extends Player {
 
   private String complexity = choseComplexity();
 
-  private static String choseComplexity() {
+  private static String choseComplexity() throws IOException {
     System.out.print("Input complexity of game (Easy/Hard): ");
-    Scanner scanner = new Scanner(System.in);
-    return scanner.next();
+    BufferedReader scanner = new BufferedReader(new InputStreamReader(System.in));
+    String complexity = scanner.readLine();
+    return complexity;
   }
 
   @Override
@@ -74,18 +78,18 @@ public class Computer extends Player {
       return;
     }
     if (board.getSymbol(1, 1) == humanChar) {
-      int i = 0;
+      int index = 0;
       boolean searchHumanSymbol = true;
       while (searchHumanSymbol) {
-        if (i == 4) {
+        if (index == 4) {
           row = Character.getNumericValue(variableMove[random.nextInt(4)].charAt(0));
           column = Character.getNumericValue(variableMove[random.nextInt(4)].charAt(1));
           board.fillCell(row, column, getSymbol());
           return;
         }
-        row = Character.getNumericValue(variableMove[i].charAt(0));
-        column = Character.getNumericValue(variableMove[i].charAt(1));
-        i++;
+        row = Character.getNumericValue(variableMove[index].charAt(0));
+        column = Character.getNumericValue(variableMove[index].charAt(1));
+        index++;
         if (board.getSymbol(row, column) == humanChar) {
           if (row == 2) {
             row = 0;
