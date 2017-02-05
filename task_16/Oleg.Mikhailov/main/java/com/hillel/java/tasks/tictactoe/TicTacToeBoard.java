@@ -5,7 +5,7 @@ public class TicTacToeBoard implements Board {
   private char[][] gameBoard;
 
   public TicTacToeBoard() {
-    this.gameBoard = new char[3][3];
+    gameBoard = new char[3][3];
   }
 
   @Override
@@ -23,7 +23,7 @@ public class TicTacToeBoard implements Board {
     }
   }
 
-  public char getGameBoard(int first, int second) {
+  public char getCharGameBoard(int first, int second) {
     return gameBoard[first][second];
   }
 }

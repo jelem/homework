@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Human extends Player {
 
   String name;
-  Board board;
+  TicTacToeBoard board = new TicTacToeBoard();
 
 
   public Human(String name) {

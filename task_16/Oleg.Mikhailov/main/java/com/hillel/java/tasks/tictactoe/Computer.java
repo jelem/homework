@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class Computer extends Player {
 
-  Game game;
-  TicTacToeBoard board;
+  TicTacToeBoard board = new TicTacToeBoard();
 
   public static String choseComplexity() {
     System.out.print("Input complexity of game: ");
@@ -21,10 +20,12 @@ public class Computer extends Player {
     String complexity = "Easy"/*game.getComplexity()*/;
     switch (complexity) {
       case "Easy":
+        System.out.println("Move from computer");
         easyMoveComputer();
         break;
 
       case "Hard":
+        System.out.println("Move from computer");
         hardMoveComputer();
         break;
     }
@@ -39,7 +40,7 @@ public class Computer extends Player {
     int column = from + (int)(Math.random()*before);
     boolean status = true;
     while (status) {
-      if (board.getGameBoard(row, column) == '0') {
+      if (board.getCharGameBoard(row, column) == '\0') {
         row = from + (int) (Math.random() * before);
         column = from + (int) (Math.random() * before);
         board.fillCell(row, column, getSymbol());

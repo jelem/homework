@@ -30,9 +30,10 @@ public class Game {
 
     while (!endGame(count)) {
       count++;
-      makeMove();
+      chosePlayer.makeMove();
       board.printBoard();
       changePlayer();
+
 
     }
     if (count == 10) {
