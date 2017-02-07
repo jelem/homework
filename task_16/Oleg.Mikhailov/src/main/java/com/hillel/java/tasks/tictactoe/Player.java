@@ -1,11 +1,13 @@
 package com.hillel.java.tasks.tictactoe;
 
+import java.io.IOException;
+
 public abstract class Player {
 
   private char symbol;
   private String name;
 
-  protected Player(String name) {
+  public Player(String name) {
     this.name = name;
   }
 
@@ -17,7 +19,7 @@ public abstract class Player {
     this.symbol = symbol;
   }
 
-  public abstract void makeMove(Board board);
+  public abstract void makeMove(Board board) throws IOException;
 
   char getSymbol() {
     return symbol;

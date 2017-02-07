@@ -1,8 +1,10 @@
 package com.hillel.java.tasks.tictactoe;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
-import java.util.Scanner;
 
 class Game {
 
@@ -11,46 +13,44 @@ class Game {
   private Player secondHuman;
   private Player chosePlayer;
   private Computer computer;
-  private String mode;
   Random random = new Random();
 
   Game(Board board) {
     this.board = board;
     firstHuman = new Human("Oleg");
-
-
   }
 
-  private String chooseModeGame() {
-    Scanner scanner = new Scanner(System.in);
+  private String chooseModeGame() throws IOException {
+    BufferedReader scanner = new BufferedReader(
+        new InputStreamReader(System.in, StandardCharsets.UTF_8));
     System.out.println("One - from people");
     System.out.println("Two - from computer");
     System.out.print("Choose game mode: ");
-    String mode = scanner.next();
+    String mode = scanner.readLine();
     return mode;
   }
 
   void start() throws IOException {
-    mode = chooseModeGame();
-    switch (mode) {
+    switch (chooseModeGame()) {
       case "One":
         secondHuman = new Human("Max");
         makeSymbolChoseFirst();
         playingProcessPeople();
         break;
       case "Two":
-        computer = new Computer("Computer");
+        Complexity complexity = new EasyComplexity();
+        computer = new Computer(complexity, "Computer");
         makeSymbolChoseSecond();
         playingProcessComputer();
         break;
       default:
+        makeSymbolChoseSecond();
         playingProcessComputer();
-        break;
     }
   }
 
 
-  private void playingProcessPeople() {
+  private void playingProcessPeople() throws IOException {
     int count = 0;
     while (!endGame() && count != 9) {
       count++;
@@ -64,7 +64,7 @@ class Game {
   }
 
 
-  private void playingProcessComputer() {
+  private void playingProcessComputer() throws IOException {
     int count = 0;
 
     while (!endGame() && count != 9) {
@@ -95,7 +95,7 @@ class Game {
     }
   }
 
-  private void makeMove(Board board) {
+  private void makeMove(Board board) throws IOException {
     chosePlayer.makeMove(board);
   }
 

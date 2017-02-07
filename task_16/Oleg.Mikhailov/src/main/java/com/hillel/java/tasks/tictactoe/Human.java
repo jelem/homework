@@ -1,15 +1,19 @@
 package com.hillel.java.tasks.tictactoe;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 public class Human extends Player {
 
-  private Scanner scanner = new Scanner(System.in);
+  BufferedReader scanner = new BufferedReader(
+      new InputStreamReader(System.in, StandardCharsets.UTF_8));
 
   private String name;
 
   Human(String name) {
-    super(name);
+    super("Oleg");
     this.name = name;
   }
 
@@ -18,9 +22,12 @@ public class Human extends Player {
   }
 
   @Override
-  public void makeMove(Board board) {
+  public void makeMove(Board board) throws IOException {
     System.out.print("Make your move " + getName() + ": ");
-    String move = scanner.next();
+    String move = scanner.readLine();
+    if (move == null) {
+      return;
+    }
     if (move.length() < 2) {
       System.out.println("Incorrect input");
       makeMove(board);

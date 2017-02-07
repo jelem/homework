@@ -1,40 +1,26 @@
 package com.hillel.java.tasks.tictactoe;
 
-import java.io.IOException;
+
 import java.util.Random;
 
-public class Computer extends Player {
+public class HardComplexity implements Complexity {
 
-  private String name;
-  private Random random = new Random();
-  private Complexity comp;
-
-  Computer(Complexity comp, String name) throws IOException {
-    super("Computer");
-    this.comp = comp;
-    this.name = name;
-  }
-
+  Random random = new Random();
 
   @Override
-  public void makeMove(Board board) {
-    char symbolComp = getSymbol();
-    comp.makeMove(board, symbolComp);
-  }
-
-  private void hardMoveComputer(Board board) {
+  public void makeMove(Board board, char symmbolComp) {
     String[] variableMove = new String[]{"00", "02", "20", "22"};
     int row;
     int column;
     char humanChar;
-    if (getSymbol() == 'X') {
+    if (symmbolComp == 'X') {
       humanChar = 'O';
     } else {
       humanChar = 'X';
     }
 
     if (board.getSymbol(1, 1) == '\0') {
-      board.fillCell(1, 1, getSymbol());
+      board.fillCell(1, 1, symmbolComp);
       return;
     }
     if (board.getSymbol(1, 1) == humanChar) {
@@ -44,7 +30,7 @@ public class Computer extends Player {
         if (index == 4) {
           row = Character.getNumericValue(variableMove[random.nextInt(4)].charAt(0));
           column = Character.getNumericValue(variableMove[random.nextInt(4)].charAt(1));
-          board.fillCell(row, column, getSymbol());
+          board.fillCell(row, column, symmbolComp);
           return;
         }
         row = Character.getNumericValue(variableMove[index].charAt(0));
@@ -61,7 +47,7 @@ public class Computer extends Player {
           } else {
             column = 2;
           }
-          board.fillCell(row, column, getSymbol());
+          board.fillCell(row, column, symmbolComp);
           searchHumanSymbol = false;
         }
       }
@@ -74,7 +60,7 @@ public class Computer extends Player {
         row = Character.getNumericValue(variableMove[arrayPosition].charAt(0));
         column = Character.getNumericValue(variableMove[arrayPosition].charAt(1));
         if (board.getSymbol(row, column) == '\0') {
-          board.fillCell(row, column, getSymbol());
+          board.fillCell(row, column, symmbolComp);
           status = false;
         }
       }
@@ -82,12 +68,5 @@ public class Computer extends Player {
     }
   }
 
-
-  @Override
-  public String getName() {
-    return name;
-  }
-
 }
-
 
