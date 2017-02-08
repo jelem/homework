@@ -155,7 +155,6 @@ public class CustomArrayList implements CustomList {
       current++;
       return element;
     }
-
   }
 
   private class BackwardListIterator implements Iterator {
