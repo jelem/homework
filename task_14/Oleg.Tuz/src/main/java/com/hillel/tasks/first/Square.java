@@ -2,21 +2,21 @@ package com.hillel.tasks.first;
 
 
 public class Square implements Figure {
-  private double Side;
+  private double side;
 
-  public Square(double Side) {
-    this.Side = Side;
+  public Square(double side) {
+    this.side = side;
   }
 
   @Override
   public double area() {
-    double area = this.Side * this.Side;
+    double area = this.side * this.side;
     return area;
   }
 
   @Override
   public double perimeter() {
-    double perimeter = this.Side * 4;
+    double perimeter = this.side * 4;
     return perimeter;
 
   }

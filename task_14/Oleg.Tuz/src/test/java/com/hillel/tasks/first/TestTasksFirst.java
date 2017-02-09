@@ -22,7 +22,7 @@ public class TestTasksFirst {
   }
 
   @Test
-  public void TestAreaSquare() {
+  public void testAreaSquare() {
     assertThat(square.area(), is(9.0));
   }
 
@@ -33,7 +33,7 @@ public class TestTasksFirst {
   }
 
   @Test
-  public void TestAreaRectangle() {
+  public void testAreaRectangle() {
 
     assertThat(rectangle.area(), is(20.0));
   }
@@ -44,7 +44,7 @@ public class TestTasksFirst {
   }
 
   @Test
-  public void TestAreaCircle() {
+  public void testAreaCircle() {
     assertThat(circle.area(), is(50.0));
   }
 
