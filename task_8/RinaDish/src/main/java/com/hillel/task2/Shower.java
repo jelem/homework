@@ -15,21 +15,21 @@ public class Shower {
     private String bathe;
 
     String bathe() {
-        if ((coldWater == false) && (hotWater == false)) {
+        if ((!coldWater) && (!hotWater)) {
             bathe = "You can not bathe";
             System.out.println(bathe);
         }
-        if ((coldWater == true) && (hotWater == false)) {
+        if ((coldWater) && (!hotWater)) {
             bathe = "You can catch a cold";
             System.out.println(bathe);
         }
 
-        if ((coldWater == false) && (hotWater == true)) {
+        if ((!coldWater) && (hotWater)) {
             bathe = "You can burn";
             System.out.println(bathe);
         }
 
-        if ((coldWater == true) && (hotWater == true)) {
+        if ((coldWater) && (hotWater)) {
             bathe = "You can bathe";
             System.out.println(bathe);
         }

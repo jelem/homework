@@ -1,4 +1,4 @@
-group 'com.hillel.lesson7'
+group 'com.hillel.les10'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
