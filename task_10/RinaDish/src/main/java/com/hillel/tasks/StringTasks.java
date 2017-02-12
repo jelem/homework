@@ -4,8 +4,8 @@ public class StringTasks {
 
 
   public String replaceEmail(String email) {
-    String newEmail = email.replace("@", "[at]");
-    newEmail = newEmail.replace(".", "[dot]");
+    String newEmail = email.replace("@", "[ at ]");
+    newEmail = newEmail.replace(".", "[ dot ]");
     return newEmail;
   }
 
