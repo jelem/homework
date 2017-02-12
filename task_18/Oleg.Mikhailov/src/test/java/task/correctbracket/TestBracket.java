@@ -1,4 +1,4 @@
-package tasks.searchbracket;
+package task.correctbracket;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -8,11 +8,11 @@ import org.junit.Test;
 
 public class TestBracket {
 
-  private SearchBct searchBct;
+  private Bracket searchBct;
 
   @Before
   public void setUp() {
-    searchBct = new SearchBct();
+    searchBct = new Bracket();
   }
 
   @Test

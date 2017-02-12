@@ -1,6 +1,6 @@
-package tasks.searchbracket;
+package task.correctbracket;
 
-public class SearchBct {
+public class Bracket {
 
   private Character[] stack;
   private int point = 0;

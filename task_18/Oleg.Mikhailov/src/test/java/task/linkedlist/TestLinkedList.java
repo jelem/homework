@@ -1,4 +1,4 @@
-package tasks.customlinkedlist;
+package task.linkedlist;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

@@ -1,4 +1,4 @@
-package tasks.customlinkedlist;
+package task.linkedlist;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -150,7 +150,7 @@ public class CustomLinkedList {
       }
       return stringJoiner.toString();
     } else {
-      return null;
+      return "";
     }
   }
 
@@ -170,6 +170,9 @@ public class CustomLinkedList {
     @Override
     public Object next() {
       Node tmp = first;
+      if (countElem < count) {
+        throw new NoSuchElementException("No elements");
+      }
       for (int i = 0; i < countElem; i++) {
         tmp = tmp.next;
       }
@@ -178,7 +181,7 @@ public class CustomLinkedList {
     }
   }
 
-  private class Node {
+  private static class Node {
 
     String value;
     Node next;
