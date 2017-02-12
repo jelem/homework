@@ -26,7 +26,9 @@ public class TestBracket {
   @Test
   public void testIncorrect() {
     String item = "(({)})";
-    assertThat(searchBct.correctInputBct(item), is(true));
+    assertThat(searchBct.correctInputBct(item), is(false));
+    String item2 = "}{(})";
+    assertThat(searchBct.correctInputBct(item2), is(false));
   }
 
 }
