@@ -24,7 +24,7 @@ public class StringTasksTest {
   @Test
   public void replaceEmailTest() {
     String email = "person@gmail.com";
-    assertThat(task1.replaceEmail(email), is("person[at]gmail[dot]com"));
+    assertThat(task1.replaceEmail(email), is("person[ at ]gmail[ dot ]com"));
   }
 
   @Test
