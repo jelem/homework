@@ -1,4 +1,4 @@
-package com.hillel.tasks;
+package com.hillel.task1;
 
 import org.junit.Before;
 import org.junit.Test;

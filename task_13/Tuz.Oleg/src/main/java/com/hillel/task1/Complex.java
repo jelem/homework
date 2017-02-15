@@ -1,4 +1,4 @@
-package com.hillel.tasks;
+package com.hillel.task1;
 
 public class Complex {
   private double real;
