@@ -1,6 +1,6 @@
 package program;
 
-public class Ruby extends Decompile{
+public class Ruby extends Decompile {
 
   void writeCode() {
     System.out.println("Write code");
