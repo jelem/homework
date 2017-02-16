@@ -1,25 +1,24 @@
 package com.hillel.homework.tictactoe;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
 public class HumanPlayer extends Player {
 
-  private static Scanner in = new Scanner(System.in, StandardCharsets.UTF_8.toString());
+  private ConsoleReader reader;
 
   public HumanPlayer(String name) {
     this.name = name;
   }
 
   public void playerMove(Board board) {
+    reader = new ConsoleReader();
     boolean validInput = false;
     do {
       System.out.print("Player " + getName() + " enter your move 1-3 row then column : ");
 
-      int row = in.nextInt() - 1;
-      int col = in.nextInt() - 1;
-      if (row >= 0 && row < Board.ROWS && col >= 0 && col < Board.COLS
-          && board.cells[row][col].content == Field.EMPTY) {
+      int row = reader.getIntInput() - 1;
+      int col = reader.getIntInput() - 1;
+      if (validInput(row, col)
+          && ableToMakeMove(board.cells[row][col])) {
         board.cells[row][col].content = getSymbol();
         validInput = true;
       } else {
@@ -28,5 +27,13 @@ public class HumanPlayer extends Player {
       }
     }
     while (!validInput);
+  }
+
+  private boolean ableToMakeMove(Cell cell) {
+    return cell.content == Field.EMPTY;
+  }
+
+  private boolean validInput(int row, int col) {
+    return row >= 0 && row < Board.ROWS && col >= 0 && col < Board.COLS;
   }
 }

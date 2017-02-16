@@ -63,7 +63,7 @@ public class DifficultyHard implements Difficulty {
           break;
         }
       }
-      board.cells[point.row][point.col].content = Field.EMPTY; //Reset this point
+      board.cells[point.row][point.col].content = Field.EMPTY;
     }
     return symbol == Field.CROSS ? max : min;
   }
