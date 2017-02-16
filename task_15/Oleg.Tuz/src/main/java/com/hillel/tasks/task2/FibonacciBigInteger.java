@@ -2,9 +2,7 @@ package com.hillel.tasks.task2;
 
 import java.math.BigInteger;
 
-/**
- * Created by TUZ on 12.02.2017.
- */
+
 public class FibonacciBigInteger {
 
 
@@ -28,5 +26,7 @@ public class FibonacciBigInteger {
 
 
   }
+
+
 
 }

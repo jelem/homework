@@ -1,11 +1,11 @@
 package com.hillel.tasks.task1;
 
 
-public class Fibonacci {
+public class FibonacciNCache {
   int[] fibonacciCache = new int[50];
   int lastIndex = 1;
 
-  public Fibonacci() {
+  public FibonacciNCache() {
     fibonacciCache[0] = 1;
     fibonacciCache[1] = 1;
   }
