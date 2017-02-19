@@ -68,6 +68,7 @@ public class Mailbox {
   public String viewSentLatters() {
     return Arrays.toString(sent);
   }
+  
   public String viewReceivedLatters() {
     return Arrays.toString(received);
   }

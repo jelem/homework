@@ -13,13 +13,6 @@ public class HumanPlayer implements Player {
   private char symbol;
   private ConsoleReader consoleReader;
 
-  public HumanPlayer(String firstname, String lastname, int age, char symbol, ConsoleReader consoleReader) {
-    this.firstName = firstname;
-    this.lastName = lastname;
-    this.age = age;
-    this.symbol = symbol;
-    this.consoleReader = consoleReader;
-  }
 
   public String getFirstName() {
     return firstName;
@@ -54,7 +47,7 @@ public class HumanPlayer implements Player {
 
     String move = consoleReader.getData();
 
-    if(!validateMove(move)){
+    if (!validateMove(move)) {
       throw new MoveNotValidException("Move not valid");
     }
     return move;
@@ -84,6 +77,47 @@ public class HumanPlayer implements Player {
   }
 
   public void setSymbol(char symbol) {
+
     this.symbol = symbol;
   }
+
+  public static class Builder {
+    private String firstName;
+    private String lastName;
+    private int age;
+    private char symbol;
+    private ConsoleReader consoleReader;
+
+    public void firstName(String firstName) {
+      this.firstName = firstName;
+    }
+
+    public void lastName(String lastName) {
+      this.lastName = lastName;
+    }
+
+    public void symbol(char symbol) {
+      this.symbol = symbol;
+    }
+
+    public void consoleReader(ConsoleReaderImpl consoleReader) {
+      this.consoleReader = consoleReader;
+    }
+
+    public HumanPlayer build() {
+      HumanPlayer humanPlayer = new HumanPlayer(this);
+      return humanPlayer;
+    }
+
+
+  }
+
+  private HumanPlayer(Builder builder) {
+    this.firstName = builder.firstName;
+    this.lastName = builder.lastName;
+    this.age = builder.age;
+    this.symbol = builder.symbol;
+    this.consoleReader = builder.consoleReader;
+  }
+
 }

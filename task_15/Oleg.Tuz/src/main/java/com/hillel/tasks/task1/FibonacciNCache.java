@@ -16,10 +16,10 @@ public class FibonacciNCache {
     if (fibonacciCache[position] != 0) {
       return fibonacciCache[position];
     }
-    int previous = fibonacciCache[lastIndex-1];
+    int previous = fibonacciCache[lastIndex - 1];
     int next = fibonacciCache[lastIndex];
 
-    for (int i = lastIndex +1 ; i <= position; i++) {
+    for (int i = lastIndex + 1; i <= position; i++) {
       int current = previous + next;
       previous = next;
       next = current;

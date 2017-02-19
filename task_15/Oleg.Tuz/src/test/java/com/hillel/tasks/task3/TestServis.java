@@ -11,7 +11,7 @@ import static org.junit.Assert.assertThat;
  * Created by TUZ on 08.02.2017.
  */
 public class TestServis {
-  public static double score = 100;
+  public static final double score = 100;
   Servis terrible, poor, good, great, excellent;
 
   @Before

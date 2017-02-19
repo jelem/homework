@@ -15,37 +15,39 @@ public class Complex {
   }
 
   public Complex addition(Complex number) {
-    double Real = (this.real + number.real);
-    double Imaginary = (this.imaginary + number.imaginary);
-    Complex result = new Complex(Real, Imaginary);
+    double real = (this.real + number.real);
+    double imaginary = (this.imaginary + number.imaginary);
+    Complex result = new Complex(real, imaginary);
     return result;
   }
 
   public Complex subtraction(Complex number) {
-    double Real = (this.real - number.real);
-    double Imaginary = (this.imaginary - number.imaginary);
-    Complex result = new Complex(Real, Imaginary);
+    double real = (this.real - number.real);
+    double imaginary = (this.imaginary - number.imaginary);
+    Complex result = new Complex(real, imaginary);
     return result;
   }
 
   public Complex multiplication(Complex number) {
-    double Real = (this.real * number.real - this.imaginary * number.imaginary);
-    double Imaginary = (this.imaginary * number.real + this.real * number.imaginary);
-    Complex result = new Complex(Real, Imaginary);
+    double real = (this.real * number.real - this.imaginary * number.imaginary);
+    double imaginary = (this.imaginary * number.real + this.real * number.imaginary);
+    Complex result = new Complex(real, imaginary);
     return result;
   }
 
   public Complex division(Complex number) {
-    double Real = (this.real * number.real + this.imaginary * number.imaginary) / (number.real * number.real + number.imaginary * number.imaginary);
-    double Imaginary = (this.imaginary * number.real - this.real * number.imaginary) / (number.real * number.real + number.imaginary * number.imaginary);
-    Complex result = new Complex(Real, Imaginary);
+    double real = (this.real * number.real + this.imaginary * number.imaginary)
+        / (number.real * number.real + number.imaginary * number.imaginary);
+    double imaginary = (this.imaginary * number.real - this.real * number.imaginary)
+        / (number.real * number.real + number.imaginary * number.imaginary);
+    Complex result = new Complex(real, imaginary);
     return result;
   }
 
   public Complex sqrt(Complex number) {
-    double Real = Math.sqrt((Math.sqrt(this.real * this.real + this.imaginary * this.imaginary) + this.real) / 2);
-    double Imaginary = Math.sqrt((Math.sqrt(this.real * this.real + this.imaginary * this.imaginary) - this.real) / 2);
-    Complex result = new Complex(Real, Imaginary);
+    double real = Math.sqrt((Math.sqrt(this.real * this.real + this.imaginary * this.imaginary) + this.real) / 2);
+    double imaginary = Math.sqrt((Math.sqrt(this.real * this.real + this.imaginary * this.imaginary) - this.real) / 2);
+    Complex result = new Complex(real, imaginary);
     return result;
   }
 
