@@ -21,7 +21,7 @@ public class Student implements Comparable<Student> {
   }
 
   public String getCityName() {
-    return city.cityName;
+    return city.getCityName();
   }
 
   @Override
