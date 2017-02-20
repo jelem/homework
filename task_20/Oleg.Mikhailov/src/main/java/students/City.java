@@ -3,19 +3,19 @@ package students;
 public class City {
 
   String country;
-  String city;
+  String cityName;
 
   public String getCountry() {
     return country;
   }
 
-  public String getCity() {
-    return city;
+  public String getCityName() {
+    return cityName;
   }
 
-  public City(String country, String city) {
+  public City(String country, String cityName) {
     this.country = country;
-    this.city = city;
+    this.cityName = cityName;
   }
 
   @Override
@@ -32,7 +32,7 @@ public class City {
 
     City city = (City) obj;
 
-    if (!city.getCountry().equals(this.country) || !city.getCity().equals(this.city)) {
+    if (!city.getCountry().equals(this.country) || !city.getCityName().equals(this.cityName)) {
       return false;
     }
 
@@ -41,7 +41,7 @@ public class City {
 
   @Override
   public String toString() {
-    return country + " : " + city;
+    return country + " : " + cityName;
   }
 
 

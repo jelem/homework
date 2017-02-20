@@ -66,7 +66,7 @@ public class TestCompare {
   public void testAnonCompare() {
     Collections.sort(students, new Comparator<Student>() {
       public int compare(Student o1, Student o2) {
-        return o1.getCity().city.compareTo(o2.getCity().city);
+        return o1.getCityName().compareTo(o2.getCityName());
       }
     });
 

@@ -20,8 +20,8 @@ public class Student implements Comparable<Student> {
     return age;
   }
 
-  public City getCity() {
-    return city;
+  public String getCityName() {
+    return city.cityName;
   }
 
   @Override
