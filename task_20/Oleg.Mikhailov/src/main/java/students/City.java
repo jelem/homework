@@ -2,8 +2,8 @@ package students;
 
 public class City {
 
-  String country;
-  String cityName;
+  private String country;
+  private String cityName;
 
   public String getCountry() {
     return country;
