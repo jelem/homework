@@ -41,4 +41,24 @@ public class Wagon {
   public String toString() {
     return Arrays.toString(place);
   }
+
+  public static class Builder {
+
+    private static final int PLACE_NUMBER = 36;
+    private boolean[] place;
+
+    public boolean[] placeWagon() {
+      this.place = new boolean[PLACE_NUMBER];
+      for (int i = 0; i < PLACE_NUMBER; i++) {
+        place[i] = true;
+      }
+      return place;
+    }
+
+  }
+
+  private Wagon(Builder builder) {
+    this.place  = builder.placeWagon();
+  }
+
 }
