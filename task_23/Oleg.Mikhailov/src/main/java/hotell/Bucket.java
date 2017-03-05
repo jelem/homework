@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Bucket {
+
   private HashMap<Visitor, Room> bucket = new HashMap<Visitor, Room>();
   private ArrayList<Integer> cacheHash = new ArrayList<Integer>();
   private ArrayList<Visitor> cacheVisitor = new ArrayList<Visitor>();

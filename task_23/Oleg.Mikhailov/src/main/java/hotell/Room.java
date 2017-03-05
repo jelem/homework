@@ -1,6 +1,7 @@
 package hotell;
 
 public class Room {
+
   private int floor;
   private int roomNumber;
 
@@ -9,11 +10,8 @@ public class Room {
     this.roomNumber = roomNumber;
   }
 
-  public int getFloor() {
-    return floor;
-  }
-
-  public void setFloor(int floor) {
-    this.floor = floor;
+  @Override
+  public String toString() {
+    return floor + " floor/room " + roomNumber;
   }
 }
