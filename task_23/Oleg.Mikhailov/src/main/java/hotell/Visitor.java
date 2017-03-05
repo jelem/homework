@@ -1,6 +1,7 @@
 package hotell;
 
 public class Visitor {
+
   private String firstName;
   private String lastName;
 
@@ -25,7 +26,7 @@ public class Visitor {
     this.lastName = lastName;
   }
 
-/*  @Override
+  @Override
   public int hashCode() {
     return (firstName != null) ? takeChar() : 0;
   }
@@ -36,9 +37,9 @@ public class Visitor {
       number = lastName.charAt(0) - 'a';
       return number;
     }
-    number  = lastName.charAt(0) - 'A';
+    number = lastName.charAt(0) - 'A';
     return number;
-  }*/
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -58,18 +59,7 @@ public class Visitor {
   }
 
   @Override
-  public int hashCode() {
-    int result = firstName != null ? takeChar() : 0;
-    return result;
-  }
-
-  private int takeChar() {
-    int number;
-    if (lastName.charAt(0) == lastName.toLowerCase().charAt(0)) {
-      number = lastName.charAt(0) - 'a';
-      return number;
-    }
-    number  = lastName.charAt(0) - 'A';
-    return number;
+  public String toString() {
+    return firstName + " " + lastName;
   }
 }
