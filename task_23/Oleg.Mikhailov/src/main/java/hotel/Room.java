@@ -1,4 +1,4 @@
-package hotell;
+package hotel;
 
 public class Room {
 

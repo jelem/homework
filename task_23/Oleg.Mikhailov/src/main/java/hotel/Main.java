@@ -1,4 +1,4 @@
-package hotell;
+package hotel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,14 +20,11 @@ public class Main {
     Room room4 = new Room(100, 12);
 
 
-    map.put(oleg, room1);
     map.put(toma, room2);
     map.put(gendalf, room3);
-    map.put(serg, room4);
 
-    Room room = map.get(serg);
 
-    System.out.println(room);
+    System.out.println(map.get(oleg));
 
   }
 
