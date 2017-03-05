@@ -1,12 +1,13 @@
 package hotell;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
 
   public static void main(String[] args) {
-    HashMap<Visitor, Room> bucket = new HashMap<Visitor, Room>();
+    Map<Visitor, Room> map = new HashMap<Visitor, Room>();
 
     Visitor oleg = new Visitor("Oleg", "Mikhailov");
     Visitor serg = new Visitor("Serg", "Mikhailov");
@@ -19,12 +20,12 @@ public class Main {
     Room room4 = new Room(100, 12);
 
 
-    bucket.put(oleg, room1);
-    bucket.put(toma, room2);
-    bucket.put(gendalf, room3);
-    bucket.put(serg, room4);
+    map.put(oleg, room1);
+    map.put(toma, room2);
+    map.put(gendalf, room3);
+    map.put(serg, room4);
 
-    Room room = bucket.get(serg);
+    Room room = map.get(serg);
 
     System.out.println(room);
 
