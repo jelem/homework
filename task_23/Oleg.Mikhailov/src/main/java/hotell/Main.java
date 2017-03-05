@@ -1,10 +1,12 @@
 package hotell;
 
+import java.util.HashMap;
+
 public class Main {
 
 
   public static void main(String[] args) {
-    Bucket bucket = new Bucket();
+    HashMap<Visitor, Room> bucket = new HashMap<Visitor, Room>();
 
     Visitor oleg = new Visitor("Oleg", "Mikhailov");
     Visitor serg = new Visitor("Serg", "Mikhailov");
@@ -21,8 +23,10 @@ public class Main {
     bucket.put(toma, room2);
     bucket.put(gendalf, room3);
     bucket.put(serg, room4);
-    bucket.get("Mikhailov");
 
+    Room room = bucket.get(serg);
+
+    System.out.println(room);
 
   }
 

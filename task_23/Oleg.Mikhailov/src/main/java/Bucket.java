@@ -1,9 +1,9 @@
-package hotell;
-
+import hotell.Room;
+import hotell.Visitor;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Bucket {
+class Bucket {
 
   private HashMap<Visitor, Room> bucket = new HashMap<Visitor, Room>();
   private ArrayList<Integer> cacheHash = new ArrayList<Integer>();

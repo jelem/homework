@@ -10,13 +10,6 @@ public class Visitor {
     this.lastName = lastName;
   }
 
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public String getLastName() {
-    return lastName;
-  }
 
   @Override
   public int hashCode() {
@@ -34,15 +27,15 @@ public class Visitor {
   }
 
   @Override
-  public boolean equals(Object o) {
-    if (this == o) {
+  public boolean equals(Object obj) {
+    if (this == obj) {
       return true;
     }
-    if (o == null || getClass() != o.getClass()) {
+    if (obj == null || getClass() != obj.getClass()) {
       return false;
     }
 
-    Visitor visitor = (Visitor) o;
+    Visitor visitor = (Visitor) obj;
 
     if (firstName != null ? !firstName.equals(visitor.firstName) : visitor.firstName != null) {
       return false;
