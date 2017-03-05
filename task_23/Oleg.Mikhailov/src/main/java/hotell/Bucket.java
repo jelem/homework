@@ -6,12 +6,12 @@ import java.util.HashMap;
 public class Bucket {
   private HashMap<Visitor, Room> bucket = new HashMap<Visitor, Room>();
   private ArrayList<Integer> cacheHash = new ArrayList<Integer>();
-  private ArrayList<Room> cacheVisitor = new ArrayList<Room>();
+  private ArrayList<Visitor> cacheVisitor = new ArrayList<Visitor>();
 
   public void put(Visitor visitor, Room room) {
     bucket.put(visitor, room);
     cacheHash.add(visitor.hashCode());
-    cacheVisitor.add(room);
+    cacheVisitor.add(visitor);
   }
 
 
