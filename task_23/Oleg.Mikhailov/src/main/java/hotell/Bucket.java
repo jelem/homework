@@ -6,12 +6,12 @@ import java.util.HashMap;
 public class Bucket {
   private HashMap<Visitor, Room> bucket = new HashMap<Visitor, Room>();
   private ArrayList<Integer> cacheHash = new ArrayList<Integer>();
-  private ArrayList<Room> cacheRoom = new ArrayList<Room>();
+  private ArrayList<Room> cacheVisitor = new ArrayList<Room>();
 
   public void put(Visitor visitor, Room room) {
     bucket.put(visitor, room);
     cacheHash.add(visitor.hashCode());
-    cacheRoom.add(room);
+    cacheVisitor.add(room);
   }
 
 
@@ -19,7 +19,7 @@ public class Bucket {
     int hash = hashCode(lastName);
     for (int i = 0; i < bucket.size(); i++) {
       if (hash == cacheHash.get(i)) {
-        System.out.println(bucket.get(cacheRoom.get(i)));
+        System.out.println(bucket.get(cacheVisitor.get(i)));
         break;
       }
     }
