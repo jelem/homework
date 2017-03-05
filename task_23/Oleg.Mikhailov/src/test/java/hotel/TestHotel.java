@@ -1,5 +1,6 @@
 package hotel;
 
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -43,7 +44,7 @@ public class TestHotel {
 
   @Test
   public void testGetEmptyMap() {
-    assertThat(map.get(oleg), is((Room) null));
+    assertThat(map.get(oleg), is(nullValue()));
   }
 
   @Test
