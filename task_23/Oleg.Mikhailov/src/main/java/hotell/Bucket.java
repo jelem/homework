@@ -2,26 +2,25 @@ package hotell;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Bucket {
   private HashMap<Visitor, Room> bucket = new HashMap<Visitor, Room>();
-  private ArrayList<Integer> cache = new ArrayList<Integer>();
+  private ArrayList<Integer> cacheHash = new ArrayList<Integer>();
+  private ArrayList<Room> cacheRoom = new ArrayList<Room>();
 
   public void put(Visitor visitor, Room room) {
     bucket.put(visitor, room);
-    cache.add(visitor.hashCode());
+    cacheHash.add(visitor.hashCode());
+    cacheRoom.add(room);
   }
 
-  public ArrayList<Integer> getCache() {
-    return cache;
-  }
 
   public void get(String lastName) {
     int hash = hashCode(lastName);
     for (int i = 0; i < bucket.size(); i++) {
-      if (hash == cache.get(i)) {
-        System.out.println(bucket);
+      if (hash == cacheHash.get(i)) {
+        System.out.println(bucket.get(cacheRoom.get(i)));
+        break;
       }
     }
   }
