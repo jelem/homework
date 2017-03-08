@@ -2,23 +2,13 @@ package com.hillel.program.disign;
 
 public class ProgramDisign extends TemplateProgramDisign {
 
-  public void main(String[] args) {
-
-    writeProgramCode();
-    debugProgramCode();
-    compileProgramCode();
-    testingProgram();
-    runProgram();
-
-  }
-
   @Override
-  public void writeProgramCode() {
+  protected void writeProgramCode() {
     System.out.println("Write your code");
   }
 
   @Override
-  public void debugProgramCode() {
+  protected void debugProgramCode() {
     System.out.println("Check your code");
     if (debugCheck()) {
       System.out.println("No bugs in the program");
@@ -27,7 +17,7 @@ public class ProgramDisign extends TemplateProgramDisign {
     }
   }
 
-  public boolean debugCheck() {
+  private boolean debugCheck() {
     System.out.println("Start debugging");
     if (false) {
       debugCheck();
@@ -36,30 +26,30 @@ public class ProgramDisign extends TemplateProgramDisign {
   }
 
   @Override
-  void compileProgramCode() {
+  protected void compileProgramCode() {
     System.out.println("Compile your code");
   }
 
   @Override
-  void testingProgram() {
+  protected void testingProgram() {
     System.out.println("Start the program tests");
     if (testProgram()) {
       System.out.println("Program tested successfully");
     } else {
-      debugProgramCode();
       testProgram();
     }
   }
 
-  public boolean testProgram() {
+  private boolean testProgram() {
+    System.out.println("Start test");
     if (false) {
-      return false;
+      debugCheck();
     }
     return true;
   }
 
   @Override
-  void runProgram() {
+  protected void runProgram() {
     System.out.println("The program is ready to provide the results");
   }
 }
