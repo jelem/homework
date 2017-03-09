@@ -1,0 +1,47 @@
+Tic Tac Toe DB
+
+01)
+create database tic_tac_toe_db;
+
+02)
+use tic_tac_toe_db;
+
+03)
+create table players(
+id int not null AUTO_INCREMENT PRIMARY KEY,
+nickname varchar(35) not null
+);
+
+04)
+create table game_statistics(
+id int not null AUTO_INCREMENT PRIMARY KEY,
+player_id int not null, FOREIGN KEY(player_id) REFERENCES players(id) 
+on DELETE RESTRICT,
+wins int,
+lost int,
+draw int);
+
+05)
+insert into players(nickname)
+value ("Computer"),
+("Who is your daddy"),
+("Petro"),
+("Stan");
+
+06)
+insert into game_statistics(player_id, wins, lost, draw)
+values (1, 3, 2, 1),
+(2, 2, 2, 2),
+(3, 0, 1, 4),
+(4, 4, 0, 2);
+
+07) 
+select * from players;
+
+08)
+select * from game_statistics;
+
+09)
+select p.nickname, g.wins, g.lost, g.draw
+from players p, game_statistics g
+where g.player_id=p.id;
