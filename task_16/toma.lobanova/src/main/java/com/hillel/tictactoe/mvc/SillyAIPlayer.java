@@ -1,5 +1,7 @@
 package com.hillel.tictactoe.mvc;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Random;
 
 public class SillyAIPlayer extends AIPlayer {
@@ -13,7 +15,4 @@ public class SillyAIPlayer extends AIPlayer {
     return makeEasyMove();
   }
 
-  @Override
-  public void reset() {
-  }
 }

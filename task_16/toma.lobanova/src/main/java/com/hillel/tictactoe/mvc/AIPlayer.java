@@ -1,18 +1,40 @@
 package com.hillel.tictactoe.mvc;
 
-public abstract class AIPlayer implements Player {
+public abstract class AIPlayer extends Player {
   protected Board board;
-  private CellState symbol;
-  private String name = "AI";
   AIRandom rand;
 
   public AIPlayer(Board board, AIRandom random) {
     this.board = board;
     rand = random;
+    setName("AI");
+    setSurname("AI");
+    setNick("AI");
   }
 
-  public Board getBoard() {
-    return board;
+  @Override
+  public String getType() {
+    return "computer";
+  }
+
+  @Override
+  public void setName(String name) {
+    this.name = "AI";
+  }
+
+  @Override
+  public void setSurname(String surname) {
+    this.surname = "AI";
+  }
+
+  @Override
+  public void setNick(String nick) {
+    this.nick = "AI";
+  }
+
+  @Override
+  public String getNick() {
+    return nick;
   }
 
   public Move makeEasyMove() {
@@ -26,20 +48,7 @@ public abstract class AIPlayer implements Player {
     return new Move(rowCoord, colCoord);
   }
 
-  public abstract Move makeMove();
-
-  public CellState getPlayerSymbol() {
-    return symbol;
-  }
-
-  public void setPlayerSymbol(CellState state) {
-    symbol = state;
-  }
-
-  public String getName() {
-    return name;
-  }
-
+  @Override
   public boolean needUserMove() {
     return false;
   }

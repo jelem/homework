@@ -1,9 +1,36 @@
 package com.hillel.tictactoe.mvc;
 
-public class HumanPlayer implements Player {
-  private CellState symbol;
-  String name = "human";
-  UserMove userMove;
+public class HumanPlayer extends Player {
+  private UserMove userMove;
+
+  public void setName(String name) {
+    if (name != null) {
+      this.name = name;
+    } else {
+      this.name = UNSET;
+    }
+  }
+
+  public void setSurname(String surname) {
+    if (name != null) {
+      this.surname = surname;
+    } else {
+      this.surname = UNSET;
+    }
+  }
+
+  public void setNick(String nick) {
+    if (nick != null) {
+      this.nick = nick;
+    } else {
+      this.nick = UNSET;
+    }
+  }
+
+  @Override
+  public String getType() {
+    return "human";
+  }
 
   public HumanPlayer(UserMove userMove) {
     this.userMove = userMove;
@@ -13,23 +40,8 @@ public class HumanPlayer implements Player {
     return true;
   }
 
-  @Override
-  public void reset() {
-  }
-
   public Move makeMove() {
     return userMove.getMove();
   }
 
-  public CellState getPlayerSymbol() {
-    return symbol;
-  }
-
-  public void setPlayerSymbol(CellState state) {
-    symbol = state;
-  }
-
-  public String getName() {
-    return name;
-  }
 }

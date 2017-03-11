@@ -31,8 +31,6 @@ public class TicTacToeBoard implements Board {
   }
 
   public boolean isEndGame(CellState playerSymbol) {
-    int rowCoord;
-    int colCoord;
     if (checkHorizontalLines(playerSymbol)) {
       return true;
     }
