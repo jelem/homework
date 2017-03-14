@@ -1,0 +1,2 @@
+JMH S 27 com.parkhomenko.MyBenchmark S 60 com.parkhomenko.generated.MyBenchmark_testLinkedList_jmhTest S 14 testLinkedList S 10 Throughput E A 1 1 1 E I 1 3 E E I 1 3 E E I 1 3 E E E E E E U 12 MICROSECONDS E E 
+JMH S 27 com.parkhomenko.MyBenchmark S 59 com.parkhomenko.generated.MyBenchmark_testArrayList_jmhTest S 13 testArrayList S 10 Throughput E A 1 1 1 E I 1 3 E E I 1 3 E E I 1 3 E E E E E E U 12 MICROSECONDS E E 
