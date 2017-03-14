@@ -29,15 +29,14 @@ public class Jdbc {
 
 
   public Properties loadProperties() throws IOException {
-    try (InputStream inputStream = this.getClass().getResourceAsStream("db.properties")){
+    try (InputStream inputStream = this.getClass().getResourceAsStream("db.properties")) {
       Properties properties = new Properties();
-        properties.load(inputStream);
+      properties.load(inputStream);
 
-        //inputStream.close();
-        return properties;
-      }
-
+      return properties;
+    }
   }
+
 
   public void addPlayer(Player player) throws SQLException {
     String name = player.getName();
@@ -84,6 +83,7 @@ public class Jdbc {
       rs.next();
       int score = rs.getInt("score") + 1;
 
+      preparedStatement.close();
 
       PreparedStatement preparedStatement2 = connection
           .prepareStatement("update score set score = ? where id=?");
@@ -91,13 +91,7 @@ public class Jdbc {
       preparedStatement2.setInt(2, id);
 
       preparedStatement2.execute();
-      if (preparedStatement != null) {
-        preparedStatement.close();
-      }
-      if (preparedStatement2 != null) {
-        preparedStatement2.close();
-
-      }
+      preparedStatement2.close();
     }
   }
 
