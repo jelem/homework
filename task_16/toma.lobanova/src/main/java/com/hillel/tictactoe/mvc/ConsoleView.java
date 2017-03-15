@@ -123,12 +123,14 @@ public class ConsoleView implements View, GameObserver {
     controller.saveGame(winnerName, connection);
   }
 
-  private Properties loadProperties() throws IOException {
+  public Properties loadProperties() throws IOException {
     try (InputStream inputStream = this.getClass().getResourceAsStream("db.properties")) {
       Properties properties = new Properties();
       properties.load(inputStream);
+
       return properties;
     }
+
   }
 
   @Override

@@ -1,0 +1,59 @@
+Lastname: Lobanova
+Firstname: Tamara
+Age: 30
+
+Lastname: Sviridova
+Firstname: Natalya
+Age: 35
+
+Lastname: Kiselev
+Firstname: Roman
+Age: 25
+
+Lastname: Ivanova
+Firstname: Olga
+Age: 45
+
+Lastname: Ternovtsov
+Firstname: Sergey
+Age: 23
+
+Lastname: Mihailov
+Firstname: Yaroslav
+Age: 67
+
+Lastname: Mihnev
+Firstname: Aleksey
+Age: 54
+
+Lastname: Zhvanetskiy
+Firstname: Michail
+Age: 84
+
+Lastname: Apalonov
+Firstname: Tamara
+Age: 19
+
+Lastname: Sokolov
+Firstname: Pyotr
+Age: 31
+
+Lastname: Sokolsckiy
+Firstname: Alexandr
+Age: 24
+
+Lastname: Shevchenko
+Firstname: Oleg
+Age: 33
+
+Lastname: Topolyov
+Firstname: Konstantin
+Age: 55
+
+Lastname: Stolikov
+Firstname: Anatoliy
+Age: 45
+
+Lastname: Harikov
+Firstname: Ivan
+Age: 27

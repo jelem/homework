@@ -1,0 +1,77 @@
+<students>
+  <student>
+    <lastname> Lobanova</lastname>
+    <name> Lobanova</name>
+    <age> Lobanova</age>
+  </student>
+  <student>
+    <lastname> Sviridova</lastname>
+    <name> Sviridova</name>
+    <age> Sviridova</age>
+  </student>
+  <student>
+    <lastname> Kiselev</lastname>
+    <name> Kiselev</name>
+    <age> Kiselev</age>
+  </student>
+  <student>
+    <lastname> Ivanova</lastname>
+    <name> Ivanova</name>
+    <age> Ivanova</age>
+  </student>
+  <student>
+    <lastname> Ternovtsov</lastname>
+    <name> Ternovtsov</name>
+    <age> Ternovtsov</age>
+  </student>
+  <student>
+    <lastname> Mihailov</lastname>
+    <name> Mihailov</name>
+    <age> Mihailov</age>
+  </student>
+  <student>
+    <lastname> Mihnev</lastname>
+    <name> Mihnev</name>
+    <age> Mihnev</age>
+  </student>
+  <student>
+    <lastname> Zhvanetskiy</lastname>
+    <name> Zhvanetskiy</name>
+    <age> Zhvanetskiy</age>
+  </student>
+  <student>
+    <lastname> Apalonov</lastname>
+    <name> Apalonov</name>
+    <age> Apalonov</age>
+  </student>
+  <student>
+    <lastname> Sokolov</lastname>
+    <name> Sokolov</name>
+    <age> Sokolov</age>
+  </student>
+  <student>
+    <lastname> Sokolsckiy</lastname>
+    <name> Sokolsckiy</name>
+    <age> Sokolsckiy</age>
+  </student>
+  <student>
+    <lastname> Shevchenko</lastname>
+    <name> Shevchenko</name>
+    <age> Shevchenko</age>
+  </student>
+  <student>
+    <lastname> Topolyov</lastname>
+    <name> Topolyov</name>
+    <age> Topolyov</age>
+  </student>
+  <student>
+    <lastname> Stolikov</lastname>
+    <name> Stolikov</name>
+    <age> Stolikov</age>
+  </student>
+  <student>
+    <lastname> Harikov</lastname>
+    <name> Harikov</name>
+    <age> Harikov</age>
+  </student>
+</students>
