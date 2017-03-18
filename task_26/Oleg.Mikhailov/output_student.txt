@@ -1,17 +1,17 @@
-<students
->  <student>
+<students>
+  <student>
     <lastname> Mikhailov</lastname>
-    <name> Mikhailov</name>
+    <name> Oleg</name>
     <age> 1</age>
   </student>
   <student>
     <lastname> Lobanova</lastname>
-    <name> Lobanova</name>
+    <name> Toma</name>
     <age> 2</age>
   </student>
   <student>
     <lastname> Annetik</lastname>
-    <name> Annetik</name>
+    <name> Kononenko</name>
     <age> 3</age>
   </student>
   <student>
@@ -19,5 +19,4 @@
     <name> Maxim</name>
     <age> 4</age>
   </student>
-</students
->
+</students>

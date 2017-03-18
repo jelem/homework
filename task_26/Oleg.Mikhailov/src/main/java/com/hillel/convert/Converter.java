@@ -2,11 +2,13 @@ package com.hillel.convert;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,8 @@ public class Converter {
 
   public void readList() {
     InputStream inputStream = getClass().getResourceAsStream("students.txt");
-    try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
+    try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,
+        StandardCharsets.UTF_8))) {
       String line;
       int count = 0;
       while ((line = bufferedReader.readLine()) != null && count != 4) {
@@ -37,8 +40,8 @@ public class Converter {
         addStudentParam(studentsParam);
       }
 
-    } catch (IOException e) {
-      e.printStackTrace();
+    } catch (IOException exep) {
+      exep.printStackTrace();
     }
   }
 
@@ -52,10 +55,9 @@ public class Converter {
   }
 
   public void writeList() {
+    File file = new File("output_student.txt");
     try (BufferedWriter bufferedWriter = new BufferedWriter(
-        new OutputStreamWriter(new FileOutputStream(
-            "/home/mikha/Документы/Course/homework/task_26/Oleg.Mikhailov/src/main/"
-                + "resources/com/hillel/convert/output_student.txt")))) {
+        new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8))) {
       bufferedWriter.write("<students>\n");
       for (Student std : students) {
         bufferedWriter.write("  <student>\r\n");
@@ -69,8 +71,8 @@ public class Converter {
       bufferedWriter.flush();
       bufferedWriter.close();
 
-    } catch (IOException e) {
-      e.printStackTrace();
+    } catch (IOException exep) {
+      exep.printStackTrace();
     }
   }
 
