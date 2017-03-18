@@ -1,6 +1,12 @@
 package com.hillel.tictactoe.mvc;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class ConsoleView implements View, GameObserver {
@@ -43,8 +49,9 @@ public class ConsoleView implements View, GameObserver {
     }
   }
 
-  public void run() {
+  public void run() throws SQLException, IOException, ClassNotFoundException {
     System.out.println("Game started");
+    setNames();
     controller.startGame();
     String symbol = null;
     while (true) {
@@ -73,16 +80,57 @@ public class ConsoleView implements View, GameObserver {
   }
 
   @Override
-  public void updateBoard() {
+  public void setNames() {
+    Scanner scanner = new Scanner(System.in, "utf-8");
+    for (int playerNumber = 1; playerNumber < 3; playerNumber++) {
+      if (controller.isPlayerHuman(playerNumber)) {
+        System.out.println("Enter your name, player " + playerNumber);
+        String name = scanner.nextLine();
+        System.out.println("Enter your surname, player " + playerNumber);
+        String surname = scanner.nextLine();
+        System.out.println("Enter your nick, player " + playerNumber);
+        String nick = scanner.nextLine();
+        controller.setNames(playerNumber, name, surname, nick);
+      }
+    }
+  }
+
+
+  @Override
+  public void updateBoard() throws SQLException, IOException, ClassNotFoundException {
     printCells();
     if (gameState.isEndGame()) {
       System.out.print("The game is over. ");
       if (!board.isFull()) {
         System.out.println("The winner is " + gameState.showWinner());
+        saveGameInDatabase(gameState.getCurrentPlayerName());
       } else {
         System.out.println("Friendship has won. There are no empty cells anymore");
+        saveGameInDatabase(null);
       }
+      System.out.println("General count of game moves is " + gameState.getGameMoves());
     }
+  }
+
+  private void saveGameInDatabase(String winnerName) throws IOException, SQLException, ClassNotFoundException {
+    Properties properties = loadProperties();
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection connection = DriverManager.getConnection(
+        properties.getProperty("url"),
+        properties.getProperty("user"),
+        properties.getProperty("password"));
+    controller.savePlayers(connection);
+    controller.saveGame(winnerName, connection);
+  }
+
+  public Properties loadProperties() throws IOException {
+    try (InputStream inputStream = this.getClass().getResourceAsStream("db.properties")) {
+      Properties properties = new Properties();
+      properties.load(inputStream);
+
+      return properties;
+    }
+
   }
 
   @Override

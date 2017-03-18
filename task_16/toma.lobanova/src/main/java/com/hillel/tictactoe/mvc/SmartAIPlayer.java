@@ -1,5 +1,8 @@
 package com.hillel.tictactoe.mvc;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public class SmartAIPlayer extends AIPlayer {
   private int gameStep = 0;
 

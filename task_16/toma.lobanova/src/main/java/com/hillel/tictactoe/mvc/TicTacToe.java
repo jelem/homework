@@ -1,7 +1,10 @@
 package com.hillel.tictactoe.mvc;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class TicTacToe {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws SQLException, IOException, ClassNotFoundException {
     UserMove userMove = new UserMove();
     Player human = new HumanPlayer(userMove);
     Board board = new TicTacToeBoard();
