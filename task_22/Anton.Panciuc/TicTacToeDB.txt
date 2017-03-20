@@ -1,0 +1,17 @@
+create database tictactoe;
+
+use tictactoe;
+
+create table player(
+nickname varchar(35) not null PRIMARY KEY,
+name varchar(35),
+age int);
+
+create table score(
+nickname varchar(35) not null PRIMARY KEY,
+win int,
+lose int);
+
+ALTER TABLE player
+ADD CONSTRAINT fk_player
+FOREIGN KEY(nickname) REFERENCES score(nickname);
