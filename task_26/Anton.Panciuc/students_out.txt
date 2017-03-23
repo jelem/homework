@@ -1,0 +1,42 @@
+<students>
+  <student>
+    <lastname> Bred</lastname>
+    <name> Pitt</name>
+    <age> 40</age>
+  </student>
+  <student>
+    <lastname> Tom</lastname>
+    <name> Cruze</name>
+    <age> 45</age>
+  </student>
+  <student>
+    <lastname> July</lastname>
+    <name> Roberts</name>
+    <age> 27</age>
+  </student>
+  <student>
+    <lastname> Dan</lastname>
+    <name> Oliver</name>
+    <age> 45</age>
+  </student>
+  <student>
+    <lastname> Ben</lastname>
+    <name> Benson</name>
+    <age> 33</age>
+  </student>
+  <student>
+    <lastname> Ted</lastname>
+    <name> Tedson</name>
+    <age> 19</age>
+  </student>
+  <student>
+    <lastname> Billy</lastname>
+    <name> Tornton</name>
+    <age> 43</age>
+  </student>
+  <student>
+    <lastname> Alex</lastname>
+    <name> Zep</name>
+    <age> 84</age>
+  </student>
+</students>
