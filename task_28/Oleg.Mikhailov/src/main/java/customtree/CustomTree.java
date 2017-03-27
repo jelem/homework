@@ -1,4 +1,4 @@
-package CustomTree;
+package customtree;
 
 import java.util.LinkedList;
 import java.util.Queue;

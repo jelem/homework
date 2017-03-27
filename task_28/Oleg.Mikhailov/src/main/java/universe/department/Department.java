@@ -9,7 +9,6 @@ public class Department {
   private Employee bossOfDepart;
   private List<Department> departments;
   private List<Employee> employees;
-  private List<Employee> headOfDepart = new ArrayList<>();
 
   public Department(String nameDepart, Employee bossOfDepart) {
     this.nameDepart = nameDepart;
@@ -20,44 +19,63 @@ public class Department {
 
   public void addEmployes(Employee employee) {
     this.employees.add(employee);
+    employee.setDepartment(nameDepart);
   }
 
   public void addSubordinateDeparts(Department depart) {
-    if (headOfDepart.isEmpty()) {
-      headOfDepart.add(this.bossOfDepart);
-    }
-    headOfDepart.add(bossOfDepart);
     departments.add(depart);
   }
 
-  public void showDepartStructure(Department department) {
+  public String showDepartStructure(Department department) {
     if (departments.isEmpty()) {
-      System.out.println("Department{" +
-          ", nameDepart='" + nameDepart + '\'' +
-          ", bossOfDepart=" + bossOfDepart +
-          ", departments=" + departments +
-          '}');
-      return;
+      System.out.println("Department{"
+          + ", nameDepart='" + nameDepart + '\''
+          + ", bossOfDepart=" + bossOfDepart
+          + ", departments=" + departments
+          + '}');
+      return this.toString();
     }
     Department selected = department;
     System.out.println(selected);
+    return selected.toString();
   }
 
-  public void showHeadDeparts() {
-//todo
+  public String showHeadDeparts() {
+    System.out.println(bossOfDepart);
+    return bossOfDepart.toString();
   }
 
 
-  public void showEmployees() {
+  public String showEmployees() {
     System.out.println(employees);
+    return employees.toString();
   }
 
   @Override
   public String toString() {
-    return "Department{" +
-        ", nameDepart='" + nameDepart + '\'' +
-        ", bossOfDepart=" + bossOfDepart +
-        ", departments=" + departments +
-        '}';
+    return "Department{"
+        + "nameDepart='" + nameDepart + '\''
+        + ", bossOfDepart=" + bossOfDepart
+        + ", departments=" + departments
+        + '}';
   }
+
+
+  public String getNameDepart() {
+    return nameDepart;
+  }
+
+  public Employee getBossOfDepart() {
+    return bossOfDepart;
+  }
+
+  public List<Department> getDepartments() {
+    return departments;
+  }
+
+  public List<Employee> getEmployees() {
+    return employees;
+  }
+
+
 }
