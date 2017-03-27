@@ -1,5 +1,6 @@
 package universe.department;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
@@ -9,12 +10,21 @@ public class Employee {
   private String lastname;
   private String department;
 
-  public Employee(String firstname, String secondname) {
+  public Employee(String firstname, String lastname) {
     this.firstname = firstname;
-    this.lastname = secondname;
+    this.lastname = lastname;
+    this.subordinates = new ArrayList<>();
+  }
+
+  public Employee() {
+    this.firstname = "Unnamed";
+    this.lastname = "Unnamed";
   }
 
   public void addSubordinates(Employee employee) {
+    if (employee == null) {
+      throw new NullPointerException("Empty empleyee");
+    }
     subordinates.add(employee);
   }
 
@@ -24,6 +34,10 @@ public class Employee {
 
   public String getDepartment() {
     return department;
+  }
+
+  public List<Employee> getSubordinates() {
+    return subordinates;
   }
 
   @Override
