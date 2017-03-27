@@ -1,6 +1,7 @@
 package customtree;
 
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -20,7 +21,7 @@ public class CustomTree {
 
     Node current = root;
     while (true) {
-      if (current.key == inputKey) {
+      if (Objects.equals(current.key, inputKey)) {
         current.value = inputValue;
         return;
       }
