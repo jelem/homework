@@ -1,4 +1,4 @@
-package CustomTree;
+package customtree;
 
 public class Main {
 
