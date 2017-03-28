@@ -10,6 +10,7 @@ public class Student implements Externalizable {
   private String firstname;
   private String lastname;
   private int age;
+  private Caesar caesar = new Caesar();
 
   public Student(String firstname, String lastname, int age) {
     this.firstname = firstname;
@@ -17,26 +18,41 @@ public class Student implements Externalizable {
     this.age = age;
   }
 
+  public Student() {
+  }
+
   @Override
   public void writeExternal(ObjectOutput objectOutput) throws IOException {
-    objectOutput.writeObject(firstname);
-    objectOutput.writeObject(lastname);
-    objectOutput.writeObject(age);
+    objectOutput.writeObject(caesar.nameEncryption(firstname));
+    objectOutput.writeObject(caesar.nameEncryption(lastname));
+    objectOutput.writeInt(caesar.ageEncryption(age));
   }
 
   @Override
   public void readExternal(ObjectInput objectInput) throws IOException, ClassNotFoundException {
-    firstname = (String) objectInput.readObject();
-    lastname = (String) objectInput.readObject();
-    age = objectInput.readInt();
+    firstname = caesar.nameDecryption((String) objectInput.readObject());
+    lastname = caesar.nameDecryption((String) objectInput.readObject());
+    age = caesar.ageDecryption(objectInput.readInt());
   }
 
   @Override
   public String toString() {
-    return "Student{" +
-        "firstname='" + firstname + '\'' +
-        ", lastname='" + lastname + '\'' +
-        ", age=" + age +
-        '}';
+    return "Student{"
+        + "firstname='" + firstname + '\''
+        + ", lastname='" + lastname + '\''
+        + ", age=" + age
+        + '}';
+  }
+
+  public String getFirstname() {
+    return firstname;
+  }
+
+  public String getLastname() {
+    return lastname;
+  }
+
+  public int getAge() {
+    return age;
   }
 }
