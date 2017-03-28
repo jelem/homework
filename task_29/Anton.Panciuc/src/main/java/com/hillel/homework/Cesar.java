@@ -1,18 +1,18 @@
 package com.hillel.homework;
 
-import java.util.ArrayList;
+
+import java.util.Arrays;
 import java.util.List;
 
-public class Cesar {
-  List<Character> alphabet = new ArrayList<>();
+public final class Cesar {
 
-  Cesar() {
-    for (char c = 'A'; c <= 'z'; c++) {
-      alphabet.add(c);
-    }
-  }
+  static final List<Character> alphabet =
+      Arrays.asList('Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H',
+          'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i',
+          'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm');
 
-  String encrypt(String text) {
+
+  public static String encrypt(String text) {
     int move = 5;
     int listSize = alphabet.size();
     StringBuilder cryptogram = new StringBuilder();
@@ -25,7 +25,7 @@ public class Cesar {
     return cryptogram.toString();
   }
 
-  public String decrypt(String text) {
+  public static String decrypt(String text) {
     int move = 5;
     int listSize = alphabet.size();
     StringBuilder newText = new StringBuilder();

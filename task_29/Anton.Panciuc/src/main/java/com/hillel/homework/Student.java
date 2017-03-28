@@ -1,5 +1,8 @@
 package com.hillel.homework;
 
+import static com.hillel.homework.Cesar.decrypt;
+import static com.hillel.homework.Cesar.encrypt;
+
 import java.io.Externalizable;
 import java.io.IOException;
 import java.io.ObjectInput;
@@ -10,7 +13,6 @@ public class Student implements Externalizable {
   private String firstName;
   private String lastName;
   private int age;
-  Cesar cesar = new Cesar();
 
   public Student(String firstName, String lastName, int age) {
     this.firstName = firstName;
@@ -43,8 +45,8 @@ public class Student implements Externalizable {
   }
 
   public void writeExternal(ObjectOutput out) throws IOException {
-    firstName = cesar.encrypt(firstName);
-    lastName = cesar.encrypt(lastName);
+    firstName = encrypt(firstName);
+    lastName = encrypt(lastName);
     age = age >> 2;
     out.writeObject(firstName);
     out.writeObject(lastName);
@@ -52,8 +54,8 @@ public class Student implements Externalizable {
   }
 
   public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-    firstName = cesar.decrypt((String) in.readObject());
-    lastName = cesar.decrypt((String) in.readObject());
+    firstName = decrypt((String) in.readObject());
+    lastName = decrypt((String) in.readObject());
     age = in.readInt() << 2;
   }
 
